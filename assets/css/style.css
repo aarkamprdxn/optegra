@@ -103,6 +103,14 @@ li {
   width: 83.5%; 
   margin: 0 auto;
 }
+
+/* common styling */
+
+h3 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
 /*=================================
   Home styling starts here
 =================================*/
@@ -127,16 +135,16 @@ header { border-bottom: 1px solid #d3d3d3; }
 }
 
 .header-top-content li:last-of-type a {
-  color: #fff;
   padding: 35px 52px;
+  color: #fff;
 }
 
 .header-top-content li:nth-child(2) a {  margin: 0 36px; }
 .header-top-content li:last-of-type {   background-color: #ee5d22; }
 
 .header-top-content li a::before {
-  font-family: FontAwesome;
   margin-right: 7px;
+  font-family: FontAwesome;
   font-size: 24px;
 }
 
@@ -145,18 +153,19 @@ header { border-bottom: 1px solid #d3d3d3; }
 .header-top-content li:last-of-type a::before { content: '\f133'; }
 
 .menu {
+  margin: 0 4.5% 0 6%;
   display: flex;
   justify-content: space-around;
-  margin: 0 4.5% 0 6%;
 }
 
 .header-bottom a { 
-  color: #66bcd2;
   padding: 16px 0;
+  color: #66bcd2;
 }
 
 nav a span {  font-size: 0px; }
 nav a span::before { font-size: 16px; }
+.hamburger span { display: none; }
 
 .dropdown {
   min-width: 70px;
