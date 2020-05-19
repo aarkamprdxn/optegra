@@ -257,8 +257,12 @@ h2 {
   text-align: center;
 }
 
-.our-services span { font-size: 0px; }
-.our-services span::before { font-size: 48px; }
+.our-services span,
+.free-services span { font-size: 0px; }
+
+.our-services span::before,
+.free-services span::before { font-size: 48px; }
+
 .our-services li { width: 20%; }
 
 .our-services p { 
@@ -281,14 +285,16 @@ h2 {
    border-radius: 50%;
  }
 
- .surgery h4 {
+ .surgery h4 ,
+ .free-services h4 {
    padding-top: 20px;
    color: #007374;
    font-size: 24px;
    font-weight: 600;
  }
 
- .surgery p {
+ .surgery p,
+ .free-services p {
    font-size: 18px;
    color: rgba(0, 0, 0, 0.7);
    padding: 10px 0;
@@ -296,7 +302,8 @@ h2 {
 
  .surgery a,
  .free-opening a,
- .download-info .form-group > a {
+ .download-info .form-group > a ,
+ .free-services a{
    border-radius: 24px;
    background-color: #ee5d22;
    color: #fff;
@@ -519,7 +526,8 @@ h2 {
 /* our customer section end */
 
 /* faq section start */
-.faq { padding: 96px 0 98px; }
+.faq,
+.free-services { padding: 96px 0 98px; }
 
 .faq h3{  
   color: #007374;
@@ -614,7 +622,20 @@ h2 {
 /* download-info section end*/
 
 /* free service section start */
+.free-services-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #007374;
+}
 
+.free-services-container li { width: 30%; }
+.call { font-size: 22px;}
+
+.free-services-container li:last-child a {
+  color: #000;
+  background-color: #fff;
+}
 /* free service section end */
 
 
