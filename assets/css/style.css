@@ -654,6 +654,62 @@ footer {
  padding: 118px 0 80px;
  background-color: #007374;
 }
+
+.footer-links {
+  display:flex;
+  justify-content: space-between;
+  vertical-align: top;
+}
+
+.footer-links > li {  
+  width: 22%;
+}
+
+.footer-links h5 { 
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.footer-links a ,
+.footer-links p {
+  color: #fff;
+  line-height: 1.8;
+}
+
+.footer-top > p {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 0 50px;
+}
+
+.footer-top { border-bottom: 1px solid #fff; }
+
+.social-links li {  display: inline-block ; }
+.social-links span::before {   font-size: 24px; }
+
+.social-links span {  
+  font-size: 0;
+  padding: 5px;
+  border: 1px solid #fff;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  padding-top: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-bottom h5 { font-weight: 600;}
+.footer-bottom p { font-size: 12px; }
+.footer-bottom figure {   padding: 28px 7px; }
+
 /* footer section end */
 /*=================================
   Home styling ends here
