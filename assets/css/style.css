@@ -126,7 +126,6 @@ header .wrapper{  width: 100%; }
 }
 
 h1 { padding: 0  5px;}
-
 header { border-bottom: 1px solid #d3d3d3; }
 
 .header-top-content li a { 
@@ -226,8 +225,9 @@ h2 {
 .banner-content .form-group { padding-top: 7px; }
 .banner-content input { margin-right: 4px; }
 
-.banner-content input,.banner-content a {
-  width: 20%;
+.banner-content input,
+.banner-content a {
+  width: 18%;
   padding: 14px 2%;
 }
 
@@ -240,7 +240,8 @@ h2 {
   font-weight: 600;
 }
 
-.banner-content a::before {
+.banner-content a::before,
+.free-services-container li:first-of-type a::before {
   content: '\f019';
   padding-right: 5px;
   font-family: FontAwesome;
@@ -321,7 +322,8 @@ h2 {
 /* service section end */
 
 /* see different section start */
-.see-differents {
+.see-differents,
+footer{
   border-top: 1px solid #d3d3d3;
   border-top-left-radius: 50% 5%;
   border-top-right-radius: 50% 5%;
@@ -562,9 +564,7 @@ h2 {
   transition: .2s;
 }
 
-.accordion-data p {
-  padding: 10px 0 25px;
-}
+.accordion-data p {  padding: 10px 0 25px; }
 
 .accordion-title h4:after {
   content: '\f078';
@@ -588,7 +588,9 @@ h2 {
 }
 
 .message { display: none;}
-.download-info .form-control {  display: block;}
+
+.download-info .form-control,
+.footer-links li {  display: block;}
 
 .download-info input[type=text],
 .download-info input[type=email],
@@ -603,19 +605,23 @@ h2 {
   margin: 0 auto 48px;
 }
 
-.download-info .form-control .fas {  
+.download-info .fas,
+.banner .fas {  
   position: relative;
   left:2%;
   color: #a9a9a9;
   font-size: 0;
 }
 
-.download-info input::placeholder {
+.download-info input::placeholder,
+.banner input::placeholder {
   padding-left: 10px;
   color: #a9a9a9;
 }
 
-.download-info .form-control .fas::before { font-size: 14px; }
+.download-info .fas::before,
+.banner .fas::before { font-size: 14px; }
+
 .download-info h3 span { border-bottom: 2px solid #70d0ba; }
 .download-info .form-group > a { padding: 13px 5%;}
 
@@ -632,13 +638,23 @@ h2 {
 .free-services-container li { width: 30%; }
 .call { font-size: 22px;}
 
+.free-services-container p { 
+  font-size: 16px;
+  padding-bottom: 24px; 
+} 
+
 .free-services-container li:last-child a {
   color: #000;
   background-color: #fff;
 }
 /* free service section end */
 
-
+/* footer section start */
+footer {
+ padding: 118px 0 80px;
+ background-color: #007374;
+}
+/* footer section end */
 /*=================================
   Home styling ends here
 =================================*/  
