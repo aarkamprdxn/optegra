@@ -366,7 +366,79 @@ h2 {
 /* see different section end */
 
 /* client review section start */
+.client-review {
+  padding: 102px 0 102px;
+  border-top: 1px solid #d3d3d3;
+  border-top-left-radius: 50% 5%;
+  border-top-right-radius: 50% 5%;
+  border-bottom: 1px solid #d3d3d3;
+  border-bottom-left-radius: 50% 5%;
+  border-bottom-right-radius: 50% 5%;
+  background-color: #cef1ea;
+}
 
+.client-review h3 {
+  font-weight: 700;
+  word-spacing: 16px;
+}
+
+.client-review ul {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+}
+
+.client-review li:first-of-type { margin-left: 10%;}
+.client-review img { border-radius: 50%; }
+.client-review li:first-of-type p { font-size: 14px; }
+
+.client-review h5 {
+  padding-bottom: 3px;
+  margin-top: 12px;
+  font-weight: 600;
+  text-decoration: underline #66bcd2;
+}
+
+.client-review li:last-of-type p { 
+  padding: 34px 68px;
+  border-radius: 22px;
+  margin-top: 54px;
+  margin-left: 15%;
+  position: relative;
+  background-color: #fff;
+  color: #00000099;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.client-review li:last-of-type p::before {
+  content: '\f10d';
+  position: absolute;
+  top: 30px;
+  left: 3.5%;
+  color: #66bcd2;
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+
+.client-review li:last-of-type p::after {
+  content: '\f10e';
+  color: #66bcd2;
+  position: absolute;
+  right: 10%;
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+
+.quote {
+  width: 5%;
+  height: 40px;
+  font-size: 0;
+  background-color: #fff;
+  margin-left: 22%;
+  border-bottom-right-radius: 100%;
+}
 /* client review section end*/
 
 
