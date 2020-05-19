@@ -516,9 +516,58 @@ h2 {
 
 
 /* faq section start */
-.faq {
-  
+.faq { padding: 96px 0 98px; }
+
+.faq h3{  
+  color: #007374;
+  width: 46%;
+  margin: 0 auto 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 16px;
 }
+
+.accordion-section {
+  width: 46%;
+  margin: 0 auto;
+}
+
+.accordion-title h4 {
+  padding: 16px 0 26px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.accordion-title {
+  border-bottom: 1px solid #a9a9a9;
+  cursor: pointer;
+  width: 100%;
+}
+
+.accordion-data {
+  text-align: left;
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.accordion-data p {
+  padding: 10px 0 25px;
+}
+
+.accordion-title h4:after {
+  content: '\f078';
+  font-family: "fontawesome";
+  font-size: 16px;
+  color: #000;
+  float: right;
+}
+
+.accordion-title h4.active:after { content: '\f077'; }
+
+.accordion-title:hover,
+.accordion-title.active { color: #ee5d22; }
+
 /* faq section end */
 
 
