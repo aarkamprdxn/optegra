@@ -313,7 +313,56 @@ h2 {
 /* service section end */
 
 /* see different section start */
+.see-differents {
+  border-top: 1px solid #d3d3d3;
+  border-top-left-radius: 50% 5%;
+  border-top-right-radius: 50% 5%;
+}
 
+.see-differents-container {  margin: 106px 25% 118px;}
+
+.see-differents h3 {
+  margin-bottom: 20px;
+  color: #007374;
+}
+
+.see-differents p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.see-differents p:last-of-type {  margin-bottom: 70px;}
+
+.differences-list h5 {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-left: 5%;
+  color: #007374;
+  font-size: 20px;
+}
+
+.differences-list span {
+  width: 20%;
+  padding: 10px 15px;
+  border-radius: 50%;
+  background-color: #91c299;
+  color: #d3d3d3;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.differences-list-content { 
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.differences-list-content ul {  display: flex;}
+.differences-list li:first-of-type span { background-color: #2f6f73;}
+.differences-list li:nth-child(2) span { background-color: #2f6f73; opacity: 0.7;}
+.differences-list li:nth-child(3) span { background-color: #2f6f73; opacity: 0.3;}
+.differences-list li:nth-child(4) span { background-color: #2f6f73; opacity: 0.5;}
+.differences-list li:nth-child(5) span { background-color: #2f6f73; opacity: 0.8;}
+.differences-img li:first-of-type {  margin: 4px 7% 0 10%; }
 /* see different section end */
 
 
