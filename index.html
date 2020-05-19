@@ -142,7 +142,7 @@
             <form action="#FIXME" method="POST">
               <div class="form-group">
                 <label for="Free Infopack">Free Infopack</label>
-                <div class="form-control">
+                <div class="form-group">
                   <input type="text" placeholder="Name">
                   <input type="email" placeholder="Email">
                   <input type="phone" placeholder="Phone">
@@ -423,25 +423,25 @@
       <section class="download-info">
         <div class="wrapper">
           <div class="download-info-container">
-            <h3>Download a free Information Pack</h3>
+            <h3>Download a <span>free</span> Information Pack</h3>
             <form action="#FIXME" method="POST">
               <div class="form-group">
-                <input type="text" placeholder="Name">
-                <span class="message">
-                  Enter your Name
-                </span>
-                <input type="email" placeholder="Email">
-                <span class="message">
-                  Enter your valid Email
-                </span>
-                <input type="phone" placeholder="Phone">
-                <span class="message">
-                  Enter your valid Phone Number
-                </span>
-                <input type="checkbox">
+                <div class="form-control">
+                  <span class="fas fa-user">user</span><input type="text" placeholder="Name">
+                  <span class="message">Enter your Name</span>
+                </div>
+                <div class="form-control">
+                  <span class="fas fa-envelope">email</span><input type="email" placeholder="Email">
+                  <span class="message">Enter your valid Email</span>
+                </div>
+                <div class="form-control">
+                  <span class="fas fa-phone">Phone</span><input type="phone" placeholder="Phone">
+                  <span class="message">Enter your valid Phone Number</span>
+                </div>
                 <label for="terms">
-                  <p>I accept the terms and conditions</p>
-                  Click <a href="#FIXME" title="Click here">here</a> to read the terms and conditions.
+                  <input type="checkbox">
+                  <span>I accept the terms and conditions</span>
+                  <p>Click <a href="#FIXME" title="Click here">here</a> to read the terms and conditions.</p>
                   <span class="message">
                     Please check this to proceed
                   </span>

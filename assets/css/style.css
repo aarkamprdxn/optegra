@@ -223,7 +223,7 @@ h2 {
   font-weight: 600;
 }
 
-.banner-content .form-control { padding-top: 7px; }
+.banner-content .form-group { padding-top: 7px; }
 .banner-content input { margin-right: 4px; }
 
 .banner-content input,.banner-content a {
@@ -295,7 +295,8 @@ h2 {
  }
 
  .surgery a,
- .free-opening a {
+ .free-opening a,
+ .download-info .form-group > a {
    border-radius: 24px;
    background-color: #ee5d22;
    color: #fff;
@@ -331,7 +332,8 @@ h2 {
   font-size: 20px;
 }
 
-.see-differents p:last-of-type {  margin-bottom: 70px;}
+.see-differents p:last-of-type {  margin-bottom: 70px; }
+.see-differents-container p span { color: #007374; }
 
 .differences-list h5 {
   width: 100%;
@@ -339,6 +341,7 @@ h2 {
   margin-left: 5%;
   color: #007374;
   font-size: 20px;
+  font-weight: 600;
 }
 
 .differences-list span {
@@ -443,7 +446,6 @@ h2 {
 }
 /* client review section end*/
 
-
 /* free opening section start*/
 .free-opening ul {
   padding: 128px 7% 94px;
@@ -466,7 +468,8 @@ h2 {
 
  .free-opening p { font-size: 18px; }
  .free-opening li:last-of-type p:first-of-type { padding: 20px 0; }
- .free-opening a { margin-top: 20px; }
+ .free-opening a,
+ .download-info .form-group > a { margin-top: 20px; }
 /* free opening section end*/
 
 /* our customer section start */
@@ -514,7 +517,6 @@ h2 {
   font-size: 16px;
 }
 /* our customer section end */
-
 
 /* faq section start */
 .faq { padding: 96px 0 98px; }
@@ -574,7 +576,41 @@ h2 {
 /* download-info section start*/
 .download-info { 
   padding-top: 110px 0 116px;
+  text-align: center;
 }
+
+.message { display: none;}
+.download-info .form-control {  display: block;}
+
+.download-info input[type=text],
+.download-info input[type=email],
+.download-info input[type=phone] {
+  width: 40%;
+  padding: 15px 27px;
+  margin: 0 auto 15px;
+}
+
+.download-info h3 {
+  width: 48%;
+  margin: 0 auto 48px;
+}
+
+.download-info .form-control .fas {  
+  position: relative;
+  left:2%;
+  color: #a9a9a9;
+  font-size: 0;
+}
+
+.download-info input::placeholder {
+  padding-left: 10px;
+  color: #a9a9a9;
+}
+
+.download-info .form-control .fas::before { font-size: 14px; }
+.download-info h3 span { border-bottom: 2px solid #70d0ba; }
+.download-info .form-group > a { padding: 13px 5%;}
+
 /* download-info section end*/
 
 
