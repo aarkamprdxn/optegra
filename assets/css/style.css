@@ -443,9 +443,28 @@ h2 {
 
 
 /* free opening section start*/
-.free-opening {
-  
+.free-opening ul {
+  padding: 128px 7% 94px;
+  display: flex;
 }
+
+.free-opening h3 { color: #007374; }
+.free-opening li:first-child span { font-size:  0; }
+
+.free-opening li:first-child span::before { 
+  color: #70d0ba;
+  font-size:  180px;
+ }
+
+ .free-opening li:last-of-type {
+   width: 55%;
+   padding-top: 54px;
+   padding-left: 4.5%;
+ }
+
+ .free-opening p { font-size: 18px; }
+ .free-opening li:last-of-type p:first-of-type { padding: 20px 0; }
+ .free-opening a { margin-top: 20px; }
 /* free opening section end*/
 
 
