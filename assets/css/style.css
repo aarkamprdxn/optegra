@@ -366,7 +366,8 @@ h2 {
 /* see different section end */
 
 /* client review section start */
-.client-review {
+.client-review,
+.our-customers  {
   padding: 102px 0 102px;
   border-top: 1px solid #d3d3d3;
   border-top-left-radius: 50% 5%;
@@ -468,7 +469,49 @@ h2 {
 /* free opening section end*/
 
 /* our customer section start */
+.our-customers {  padding: 102px 0 148px; }
 
+.our-customers .wrapper > p { 
+  padding: 16px 0 28px;
+  font-weight: 600; 
+}
+
+.our-customers p span::before {
+  content: '\f005';
+  font-family: FontAwesome;
+  color: #00b67a;
+}
+
+.our-customers ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.our-customers li {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 22px 30px 50px;
+  width: 27%;
+}
+
+.star .fas{
+  color: #fff;
+  background-color: #00b67a;
+  font-size: 0px;
+  padding: 5px;
+  margin-bottom: 18px;
+}
+
+.star .fas::before { font-size: 16px; }
+.customer-content { font-size: 18px;}
+.customer-content h5 { font-weight: 600; }
+.customer-content p { padding: 10px 0;}
+
+.customer-content span {
+  color: #a9a9a9;
+  font-size: 16px;
+}
 /* our customer section end */
 
 
