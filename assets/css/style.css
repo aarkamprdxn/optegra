@@ -367,7 +367,8 @@ h2 {
 
 /* client review section start */
 .client-review,
-.our-customers  {
+.our-customers,
+.download-info {
   padding: 102px 0 102px;
   border-top: 1px solid #d3d3d3;
   border-top-left-radius: 50% 5%;
@@ -567,10 +568,14 @@ h2 {
 
 .accordion-title:hover,
 .accordion-title.active { color: #ee5d22; }
-
 /* faq section end */
 
 
+/* download-info section start*/
+.download-info { 
+  padding-top: 110px 0 116px;
+}
+/* download-info section end*/
 
 
 
