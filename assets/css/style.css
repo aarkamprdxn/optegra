@@ -249,7 +249,67 @@ h2 {
 /* banner section end */
 
 /* service section start */
+.our-services {
+  display: flex;
+  justify-content: space-around;
+  color: #007374;
+  padding: 60px 0 148px;
+  text-align: center;
+}
 
+.our-services span { font-size: 0px; }
+.our-services span::before { font-size: 48px; }
+.our-services li { width: 20%; }
+
+.our-services p { 
+  padding-top: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+ }
+
+ .surgery {
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   margin-bottom: 130px;
+ }
+
+ .surgery li { width: 30%;}
+
+ .surgery img {
+   width: 86%;
+   border-radius: 50%;
+ }
+
+ .surgery h4 {
+   padding-top: 20px;
+   color: #007374;
+   font-size: 24px;
+   font-weight: 600;
+ }
+
+ .surgery p {
+   font-size: 18px;
+   color: rgba(0, 0, 0, 0.7);
+   padding: 10px 0;
+ }
+
+ .surgery a,
+ .free-opening a {
+   border-radius: 24px;
+   background-color: #ee5d22;
+   color: #fff;
+   padding: 10px 7%;
+   font-weight: 600;
+ }
+
+ .surgery a::after,
+ .free-opening a::after {
+   content: '\f061';
+   font-family: FontAwesome;
+   padding-left: 8px;
+   font-weight: 400; 
+ }
 /* service section end */
 
 
