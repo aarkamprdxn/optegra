@@ -828,3 +828,88 @@ footer {
     transition: all .4s ease-in-out;
   }
 }
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+  /* hamburger  start*/
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 2%;
+    width: 5%;
+  }
+
+  .hamburger > span {
+    background-color: #007374;
+    border-radius: 3px;
+    display: block;
+    height: 4px;
+    margin: 5px 0;
+    text-indent: -9999px;
+    transition: all .5s ease-in-out;
+  }
+  
+  .hamburger-active > span:nth-child(1) {
+    background-color: crimson;
+    margin: 0;
+    transform: translate(-5px,5px) rotate(45deg);
+  }
+  
+  .hamburger-active > span:nth-child(2) {
+    background-color: blueviolet;
+    margin: 0;
+    transform: scale(0);
+  }
+
+  .hamburger-active > span:nth-child(3) {
+    background-color: crimson;
+    margin: 0;
+    transform: translate(-6px,-5px) rotate(-45deg);
+  }
+  
+  .menu {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: absolute;
+    width: auto;
+    right: 0;
+    transform: scale(0);
+    top: 45px;
+    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);
+    background: linear-gradient(to right, #CCC, #fff,#CBB);
+  }
+  
+  .navScale {
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  nav ul li { padding: 5px; }
+  
+  .menu li a { 
+    color: #000 ; 
+    border: none;
+  }
+
+  .menu li {
+    border: 1px solid #009fe3;
+    display: block;
+    background-color:white;
+    text-align: center;
+  }
+  /* hamburger end */
+  
+  .header-top-content { display: none; }
+
+  .banner a,
+  .surgery a { font-size: 15px; }
+  .surgery h4 { font-size: 19px;}
+  .see-differents h3 { font-size: 31px;}
+
+  .faq h3,
+  .accordion-section {  width: 64%;}
+}
