@@ -982,3 +982,38 @@ footer {
     margin-bottom: 30px;
   }
 }
+
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  
+  h2 {font-size: 35px;}
+  .banner form {  display: none; }
+  .see-differents h3 { font-size: 21px; }
+  
+  .surgery a,
+  .our-customers li p,
+  .accordion-title h4 { font-size: 13px; }
+  
+  .our-services li {  padding-right: 0;}
+  .differences-img li:first-of-type { margin: 0;}
+
+  .differences-list h5,
+  .see-differents p { font-size: 16px; }
+
+  .our-services li,
+  .surgery li {  width: 50%; }
+
+  h3 { font-size: 24px; }
+  .client-review h3 { word-spacing: 5px; }
+  .free-opening li:last-of-type { width: 80%; }
+  .our-customers .wrapper > p { font-size: 13px; }
+  .our-customers li { width: 70%; }
+  .download-info .fas { left: 6%; }
+  
+  .our-customers .next::before,
+  .our-customers .prev::before { font-size: 36px; }
+
+  .download-info input[type=text], 
+  .download-info input[type=email] {  width: 50%; }
+}
