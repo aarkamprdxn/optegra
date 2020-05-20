@@ -314,7 +314,7 @@ h2 {
    border-radius: 24px;
    background-color: #ee5d22;
    color: #fff;
-   padding: 10px 7%;
+   padding: 15px 5%;
    font-weight: 600;
   }
   
@@ -797,7 +797,7 @@ footer {
   align-items: center;
 }
 
-.eye-surgery-review li {   width: 43.5%; }
+.eye-surgery-review li { width: 43.5%; }
 .eye-surgery-review li:first-child { text-align: right; }
 .eye-surgery-review h3 { color: #007374; }
 
@@ -819,6 +819,7 @@ footer {
   padding: 124px 0 94px;
   border-bottom-left-radius: 50% 3.5%;
   border-bottom-right-radius: 50% 3.5%;
+  border-bottom: 1px solid #a9a9a9;
 }
 
 .top-review-content {
@@ -833,7 +834,7 @@ footer {
   overflow: hidden;
 }
 
-.top-review-content a {  color: #ee5d22; }
+.top-review-content a { color: #ee5d22; }
 .top-review-content:nth-child(2n) { padding-left: 20px;}
 
 .top-review-content li:last-child {
@@ -894,9 +895,17 @@ footer {
   .surgery a:hover,
   .free-opening a:hover,
   .download-info .form-control a:hover,
-  .free-services a:hover { 
+  .free-services a:hover,
+  .load-more a:hover { 
     background-color: #db500b;
     color: rgba(255,255, 255, 0.5);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+  .top-review-content a:hover,
+  .top-review-content a:hover::after {
+    color: #70d0ba;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
@@ -1006,7 +1015,7 @@ footer {
   .our-customers li { width: 20%; }
   .star .fas::before { font-size: 10px; }
   .customer-content p { font-size: 15px;}
-  
+
   .faq h3,
   .accordion-section {  width: 64%;}
 
