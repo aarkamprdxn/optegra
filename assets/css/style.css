@@ -835,13 +835,11 @@ footer {
 
 .top-review-content a {  color: #ee5d22; }
 .top-review-content:nth-child(2n) { padding-left: 20px;}
-.top-review-content li:first-child {  width: 34%; }
 
 .top-review-content li:last-child {
   width: 60%;
   padding: 36px 22px 24px;
 }
-
 
 .top-review h5 { 
   font-size: 20px;
@@ -851,9 +849,17 @@ footer {
 .top-review p {
   padding: 20px 0 10px;
   font-size: 16px;
-  line-height: 1.6;
 }
 
+.top-review-content a::after {
+  content: '\f0a9';
+  padding-left: 7px;
+  color: #ee5d22;
+  font-size: 20px;
+  font-family: FontAwesome;
+}
+
+.highlight-review { background-color: #e6f8f4;}
 .load-more { text-align: center;}
 /* top-review section  end*/
 
@@ -1008,6 +1014,7 @@ footer {
   .free-opening ul,
   .free-opening li,
   .free-services-container,
+  .eye-surgery-review ul,
   .footer-links { display: block; }
 
   .our-services { padding: 90px 0; }
@@ -1038,16 +1045,27 @@ footer {
     word-spacing: 10px;
     text-align: center;
   }
-
+  
   .free-opening li:last-of-type {  
     width: 70%;
     margin: auto 15%;
     padding-left: 0;
   }
-
+  
   .free-opening li,
   .footer-links li { margin: auto 25%; }
   
+  .eye-surgery-review li:first-child {
+    text-align: center;
+    width: 65%;
+    margin: 0 18% 20px;
+  }
+
+  .eye-surgery-review li {
+    text-align: center;
+    width: auto;
+  }
+
   .social-links li { margin: 0; }
   .footer-links h5 { font-size: 24px; }
 
@@ -1071,7 +1089,9 @@ footer {
   
   .surgery a,
   .our-customers li p,
-  .accordion-title h4 { font-size: 13px; }
+  .accordion-title h4,
+  .our-customers .wrapper > p,
+  .eye-surgery-review p { font-size: 13px; }
   
   .our-services li {  padding-right: 0;}
   .differences-img li:first-of-type { margin: 0;}
@@ -1085,7 +1105,6 @@ footer {
   h3 { font-size: 24px; }
   .client-review h3 { word-spacing: 5px; }
   .free-opening li:last-of-type { width: 80%; }
-  .our-customers .wrapper > p { font-size: 13px; }
   .our-customers li { width: 70%; }
   .download-info .fas { left: 6%; }
   
