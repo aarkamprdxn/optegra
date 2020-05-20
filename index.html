@@ -52,25 +52,58 @@
           </ul>
         </div>
         <div class="header-bottom">
+          <div class="hamburger">
+            <span>hamburger</span>
+            <span>hamburger</span>
+            <span>hamburger</span>
+          </div>
           <nav>
-            <ul>
+            <ul class="menu">
               <li>
-                <a href="#FIXME" title="Laser Eye Surgery">Laser Eye Surgery</a>
+                <a href="#FIXME" title="Laser Eye Surgery">Laser Eye Surgery <span
+                    class="fas fa-chevron-down">chevron-down</span></a>
+                <ul class="dropdown">
+                  <li><a href="#FIXME" title="Aftercare">Aftercare</a></li>
+                  <li><a href="#FIXME" title="Risk">Risk</a></li>
+                  <li><a href="#FIXME" title="Cost">Cost</a></li>
+                </ul>
               </li>
               <li>
-                <a href="#FIXME" title="Lens Replacement">Lens Replacement</a>
+                <a href="#FIXME" title="Lens Replacement">Lens Replacement <span
+                    class="fas fa-chevron-down">chevron-down</span></a>
+                <ul class="dropdown">
+                  <li><a href="#FIXME" title="Who Quality?">Who Quality?</a></li>
+                  <li><a href="#FIXME" title="Risk">Risk</a></li>
+                  <li><a href="#FIXME" title="Cost">Cost</a></li>
+                </ul>
               </li>
               <li>
-                <a href="#FIXME" title="Cataracts Medical">Cataracts Medical</a>
+                <a href="#FIXME" title="Cataracts Medical">Cataracts</a>
               </li>
               <li>
-                <a href="#FIXME" title="Medical Treatments">Medical Treatments</a>
+                <a href="#FIXME" title="Medical Treatments">Medical Treatments <span
+                    class="fas fa-chevron-down">chevron-down</span></a>
+                <ul class="dropdown">
+                  <li><a href="#FIXME" title="Eye Flooters">Eye Flooters</a></li>
+                  <li><a href="#FIXME" title="Hyperopia">Hyperopia</a></li>
+                  <li><a href="#FIXME" title="Myopia">Myopia</a></li>
+                </ul>
               </li>
               <li>
-                <a href="#FIXME" title="Hospitals and clinics">Hospitals and clinics</a>
+                <a href="#FIXME" title="Hospitals and clinics">Hospitals and clinics <span
+                    class="fas fa-chevron-down">chevron-down</span></a>
+                <ul class="dropdown">
+                  <li><a href="#FIXME" title="Manchester Eye Hospital">Manchester Eye Hospital</a></li>
+                  <li><a href="#FIXME" title="London Eye Hospital">London Eye Hospital</a></li>
+                  <li><a href="#FIXME" title="Leeds Eye Hospital">Leeds Eye Hospital</a></li>
+                </ul>
               </li>
               <li>
-                <a href="#FIXME" title="About">About</a>
+                <a href="#FIXME" title="About">About <span class="fas fa-chevron-down">chevron-down</span></a>
+                <ul class="dropdown">
+                  <li><a href="#FIXME" title="Our Book">Our Book</a></li>
+                  <li><a href="#FIXME" title="Our Facilities">Our Facilities</a></li>
+                </ul>
               </li>
               <li>
                 <a href="#FIXME" title="Blog">Blog</a>
@@ -79,7 +112,7 @@
                 <a href="#FIXME" title="Contact Us">Contact Us</a>
               </li>
               <li>
-                <a href="#FIXME" title="search"><span class="fas fa-search"></span></a>
+                <a href="#FIXME" title="search"><span class="fas fa-search">search</span></a>
               </li>
             </ul>
           </nav>
@@ -93,7 +126,7 @@
         <div class="wrapper">
           <div class="banner-content">
             <h2>Choose UK's TOP Rated</h2>
-            <p>S Star Laser Eye Surgery, Lens Replacement & Cataract Treatmen</p>
+            <p>5 Star Laser Eye Surgery, Lens Replacement & Cataract Treatmen</p>
             <ul>
               <li>
                 <figure>
@@ -109,10 +142,12 @@
             <form action="#FIXME" method="POST">
               <div class="form-group">
                 <label for="Free Infopack">Free Infopack</label>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="phone" placeholder="Phone">
-                <a href="#FIXME" title="Download">Download</a>
+                <div class="form-group">
+                  <span class="fas fa-user">user</span><input type="text" placeholder="Name">
+                  <span class="fas fa-envelope">email</span><input type="email" placeholder="Email">
+                  <span class="fas fa-phone">phone</span><input type="phone" placeholder="Phone">
+                  <a href="#FIXME" title="Download">Download</a>
+                </div>
               </div>
             </form>
           </div>
@@ -138,7 +173,6 @@
               <p>See our immaculate 5 star hospitals</p>
             </li>
           </ul>
-
           <ul class="surgery">
             <li>
               <figure>
@@ -187,20 +221,45 @@
               committed to delivering the exceptional personalised eye care you deserve.</p>
             <p> To find out your suitability, book a <span>free virtual consultation</span> with us today.</p>
             <ul class="differences-list">
-              <li><span>T</span>
-                <h5>Top-rated eye hospital acording to patients</h5>
+              <li class="differences-list-content">
+                <ul>
+                  <li><span class="list-letter">T</span></li>
+                  <li>
+                    <h5>Top-rated eye hospital acording to patients</h5>
+                  </li>
+                </ul>
               </li>
-              <li><span>R</span>
-                <h5>Results are excellent and consistent</h5>
+              <li class="differences-list-content">
+                <ul>
+                  <li><span class="list-letter">R</span></li>
+                  <li>
+                    <h5>Results are excellent and consistent</h5>
+                  </li>
+                </ul>
               </li>
-              <li><span>U</span>
-                <h5>UK's largest network of dedicated eye hospitals</h5>
+              <li class="differences-list-content">
+                <ul>
+                  <li><span class="list-letter">U</span></li>
+                  <li>
+                    <h5>UK's largest network of dedicated eye hospitals</h5>
+                  </li>
+                </ul>
               </li>
-              <li><span>S</span>
-                <h5>Surgeons who are committed experts in the field of eye care</h5>
+              <li class="differences-list-content">
+                <ul>
+                  <li><span class="list-letter">S</span></li>
+                  <li>
+                    <h5>Surgeons who are committed experts in the field of eye care</h5>
+                  </li>
+                </ul>
               </li>
-              <li><span>T</span>
-                <h5>Treatment options for the full range of vision correction solutions</h5>
+              <li class="differences-list-content">
+                <ul>
+                  <li><span class="list-letter">T</span></li>
+                  <li>
+                    <h5>Treatment options for the full range of vision correction solutions</h5>
+                  </li>
+                </ul>
               </li>
             </ul>
             <ul class="differences-img">
@@ -224,7 +283,7 @@
           <ul>
             <li>
               <figure>
-                <img src="https://via.placeholder.com/250x226" alt="client-img">
+                <img src="https://via.placeholder.com/254x226" alt="client-img">
               </figure>
               <h5>Judd Trump</h5>
               <p>Snooker World Champign</p>
@@ -232,84 +291,183 @@
             <li>
               <p>My laser eye surgery at Optegra gave me the precise & perfect vision to become Snooker world champion.
               </p>
+              <div class="quote">quote</div>
             </li>
           </ul>
         </div>
       </section>
       <section class="free-opening">
         <div class="wrapper">
-          <li>
-            <span class="fas fa-comments">messages</span>
-          </li>
-          <li>
-            <h3>Come along to one of our free open evenings</h3>
-            <p>Go glasses free by learning more about the latest vision correction techniques. No obligation whatsoever
-              but our consultants will tell you everything you need to know and answer any questions you may have. Take
-              a tour of one of our clinics and discover why we're world leaders in laser eye surgery.</p>
-            <p>We're the only UK provider who invite you any of our nationwide locations, so you can see our amazing
-              facilities and people for yourself.</p>
-            <a href="#FIXME" title="Book Free">Book Free</a>
-          </li>
+          <ul>
+            <li>
+              <span class="fas fa-comments">messages</span>
+            </li>
+            <li>
+              <h3>Come along to one of our free open evenings</h3>
+              <p>Go glasses free by learning more about the latest vision correction techniques. No obligation
+                whatsoever
+                but our consultants will tell you everything you need to know and answer any questions you may have.
+                Take
+                a tour of one of our clinics and discover why we're world leaders in laser eye surgery.</p>
+              <p>We're the only UK provider who invite you any of our nationwide locations, so you can see our amazing
+                facilities and people for yourself.</p>
+              <a href="#FIXME" title="Book Free">Book Free</a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="our-customers">
         <div class="wrapper">
           <h3>Our customers really love Optegra</h3>
           <p>Rated 4.8 out of 5 based on 2,472 reviews <span>Trustpilot</span></p>
-          <div>
-            <ul>
-              <li class="customer-content">
-                <div class="star">
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                </div>
-                <h5>Good experience</h5>
-                <p>I have just been discharged by the doctor from having cateract operation in August . The whole
-                  experience has...</p>
-                <span>Vivien Boswell</span>
-              </li>
-              <li class="customer-content">
-                <div class="star">
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                </div>
-                <h5>Good experience</h5>
-                <p>I have just been discharged by the doctor from having cateract operation in August . The whole
-                  experience has...</p>
-                <span>Vivien Boswell</span>
-              </li>
-              <li class="customer-content">
-                <div class="star">
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                  <span class="fas fa-star">star</span>
-                </div>
-                <h5>Good experience</h5>
-                <p>I have just been discharged by the doctor from having cateract operation in August . The whole
-                  experience has...</p>
-                <span>Vivien Boswell</span>
-              </li>
-            </ul>
+          <div class="slideshow-container">
+            <div class="slides fade-right">
+              <ul>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 1</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 1</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 1</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+              </ul>
+            </div>
+            <div class="slides fade-right">
+              <ul>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 2</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 2</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 2</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+              </ul>
+            </div>
+            <div class="slides fade-right">
+              <ul>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 3</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 3</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+                <li class="customer-content">
+                  <div class="star">
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                    <span class="fas fa-star">star</span>
+                  </div>
+                  <h5>Good experience 3</h5>
+                  <p>I have just been discharged by the doctor from having cateract operation in August . The whole
+                    experience has...</p>
+                  <span>Vivien Boswell</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" id="nxt" onclick="plusSlides(-1)" title="Previous">Previous</a>
+            <a class="next" onclick="plusSlides(1)" title="Next">Next</a>
           </div>
         </div>
       </section>
       <section class="faq">
         <div class="wrapper">
+          <h3>Laser eye surgery FAQs</h3>
           <div class="accordion-section">
             <ul class="accordion">
               <li class="accordion-title">
                 <h4>Does laser eye surgery hurt?</h4>
               </li>
               <li class="accordion-data">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi ullam, ab explicabo enim ex.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem qui esse perspiciatis
+                  corporis, debitis, dolore, sed temporibus dolores architecto ipsa praesentium pariatur! Ipsam et
+                  quibusdam ut dignissimos deleniti officiis quas similique asperiores obcaecati quasi.</p>
               </li>
             </ul>
             <ul class="accordion">
@@ -317,7 +475,9 @@
                 <h4>How long does laser eye surgery take?</h4>
               </li>
               <li class="accordion-data">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi ullam, ab explicabo enim ex.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem qui esse perspiciatis
+                  corporis, debitis, dolore, sed temporibus dolores architecto ipsa praesentium pariatur! Ipsam et
+                  quibusdam ut dignissimos deleniti officiis quas similique asperiores obcaecati quasi.</p>
               </li>
             </ul>
             <ul class="accordion">
@@ -325,7 +485,9 @@
                 <h4>How quickly will I see the results of laser eye surgery?</h4>
               </li>
               <li class="accordion-data">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi ullam, ab explicabo enim ex.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem qui esse perspiciatis
+                  corporis, debitis, dolore, sed temporibus dolores architecto ipsa praesentium pariatur! Ipsam et
+                  quibusdam ut dignissimos deleniti officiis quas similique asperiores obcaecati quasi.</p>
               </li>
             </ul>
             <ul class="accordion">
@@ -333,7 +495,9 @@
                 <h4>Should I keep reading glasses with laser eye surgery?</h4>
               </li>
               <li class="accordion-data">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi ullam, ab explicabo enim ex.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem qui esse perspiciatis
+                  corporis, debitis, dolore, sed temporibus dolores architecto ipsa praesentium pariatur! Ipsam et
+                  quibusdam ut dignissimos deleniti officiis quas similique asperiores obcaecati quasi.</p>
               </li>
             </ul>
             <ul class="accordion">
@@ -341,7 +505,9 @@
                 <h4>Is laser eye surgery right for me?</h4>
               </li>
               <li class="accordion-data">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi ullam, ab explicabo enim ex.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem qui esse perspiciatis
+                  corporis, debitis, dolore, sed temporibus dolores architecto ipsa praesentium pariatur! Ipsam et
+                  quibusdam ut dignissimos deleniti officiis quas similique asperiores obcaecati quasi.</p>
               </li>
             </ul>
             <ul class="accordion">
@@ -349,7 +515,9 @@
                 <h4>Is laser eye surgery safe?</h4>
               </li>
               <li class="accordion-data">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam animi ullam, ab explicabo enim ex.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem qui esse perspiciatis
+                  corporis, debitis, dolore, sed temporibus dolores architecto ipsa praesentium pariatur! Ipsam et
+                  quibusdam ut dignissimos deleniti officiis quas similique asperiores obcaecati quasi.</p>
               </li>
             </ul>
           </div>
@@ -358,30 +526,31 @@
       <section class="download-info">
         <div class="wrapper">
           <div class="download-info-container">
-            <h3>Download a free Information Pack</h3>
+            <h3>Download a <span>free</span> Information Pack</h3>
             <form action="#FIXME" method="POST">
               <div class="form-group">
-                <input type="text" placeholder="Name">
-                <span class="message">
-                  Enter your Name
-                </span>
-                <input type="email" placeholder="Email">
-                <span class="message">
-                  Enter your valid Email
-                </span>
-                <input type="phone" placeholder="Phone">
-                <span class="message">
-                  Enter your valid Phone Number
-                </span>
-                <input type="checkbox">
-                <label for="terms">
-                  <p>I accept the terms and conditions</p>
-                  Click <a href="#FIXME" title="Click here">here</a> to read the terms and conditions.
-                  <span class="message">
-                    Please check this to proceed
-                  </span>
-                </label>
-                <a href="#FIXME" title="Submit">Submit</a>
+                <span class="fas fa-user">user</span>
+                <input type="text" id="name" placeholder="Name">
+                <div class="message">Enter your Name</div>
+              </div>
+              <div class="form-group">
+                <span class="fas fa-envelope">email</span>
+                <input type="email" id="email" placeholder="Email">
+                <div class="message">Enter your valid Email</div>
+              </div>
+              <div class="form-group">
+                <span class="fas fa-phone">Phone</span>
+                <input type="text" id="phone" placeholder="Phone">
+                <div class="message">Enter your valid Phone Number</div>
+              </div>
+              <label for="terms">
+                <input type="checkbox" id="terms">
+                <span>I accept the terms and conditions</span>
+                <p>Click <a href="#FIXME" title="Click here">here</a> to read the terms and conditions.</p>
+                <span class="message">Please check this to proceed</span>
+              </label>
+              <div class="form-control">
+                <a href="#FIXME" title="Submit" onclick="onFormSubmit()">Submit</a>
               </div>
             </form>
           </div>
@@ -389,7 +558,7 @@
       </section>
       <section class="free-services">
         <div class="wrapper">
-          <ul class="free-serviecs-container">
+          <ul class="free-services-container">
             <li>
               <span class="fas fa-file-download">download</span>
               <h4>Download a free infopack</h4>
@@ -404,10 +573,10 @@
               <a href="#FIXME" title="BOOK NOW">BOOK NOW</a>
             </li>
             <li>
-              <span class="fas fa-phone-alt"></span>
+              <span class="fas fa-phone-alt">phone</span>
               <h4>Call us free</h4>
               <p>We'll answer any questions you may have about treatment.</p>
-              <span><a href="#FIXME" title="call">0808 301 2621</a></span>
+              <span><a href="#FIXME" class="call" title="call">0808 301 2621</a></span>
               <p>Line is open Mon-Fri: 9am-6pm. Sat: 9am-2pm</p>
             </li>
           </ul>
@@ -478,29 +647,29 @@
               <h5>Follow Us</h5>
               <ul class="social-links">
                 <li>
-                  <a href="#FIXME" rel="unfollow" title="instagram" target="_blank"><span
+                  <a href="#FIXME" rel="nofollow" title="instagram" target="_blank"><span
                       class="fab fa-instagram">instagram</span></a>
                 </li>
                 <li>
-                  <a href="#FIXME" rel="unfollow" title="instagram" target="_blank"><span
+                  <a href="#FIXME" rel="nofollow" title="instagram" target="_blank"><span
                       class="fab fa-twitter">twitter</span></a>
                 </li>
                 <li>
-                  <a href="#FIXME" rel="unfollow" title="instagram" target="_blank"><span
+                  <a href="#FIXME" rel="nofollow" title="instagram" target="_blank"><span
                       class="fab fa-linkedin-in">linkedin</span></a>
                 </li>
                 <li>
-                  <a href="#FIXME" rel="unfollow" title="instagram" target="_blank"><span
+                  <a href="#FIXME" rel="nofollow" title="instagram" target="_blank"><span
                       class="fab fa-youtube">youtube</span></a>
                 </li>
                 <li>
-                  <a href="#FIXME" rel="unfollow" title="instagram" target="-blank"><span
+                  <a href="#FIXME" rel="nofollow" title="instagram" target="-blank"><span
                       class="fab fa-facebook-square">facebook</span></a>
                 </li>
               </ul>
             </li>
           </ul>
-          <p>Optegra were awarded the 1 best in category badge by custorner review website Trustpibt between January
+          <p>""Optegra were awarded the 1 best in category badge by custorner review website Trustpibt between January
             2015 arri May 2016 for tm category of best eye treatrnent companies. Optegra were narned as Best Eye
             Hospital UK by click cornparison site Doctify.</p>
         </div>
@@ -557,7 +726,6 @@
   </div>
   <!--container end-->
 
-  <script src="js/vendors/jquery-1.8.3.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
