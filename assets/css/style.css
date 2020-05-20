@@ -785,8 +785,31 @@ footer {
   Home styling ends here
 =================================*/ 
 
+/* .eye-surgery-review section start */
+
 .eye-surgery-review {  padding: 50px 0;}
 
+.eye-surgery-review ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.eye-surgery-review li {   width: 43.5%; }
+.eye-surgery-review li:first-child { text-align: right; }
+.eye-surgery-review h3 { color: #007374; }
+
+.eye-surgery-review p {
+  padding-top: 26px;
+  color: #00000099;
+  line-height: 1.5;
+}
+
+.eye-surgery-review li img {  
+  border-radius: 50%; 
+  width: 91.5%;
+ }
+ /* .eye-surgery-review section end */ 
 
 /*========================================
  Laser Eye Replacement styling starts here
