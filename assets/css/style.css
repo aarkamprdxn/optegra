@@ -1017,3 +1017,28 @@ footer {
   .download-info input[type=text], 
   .download-info input[type=email] {  width: 50%; }
 }
+
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
+  .banner ul ,.differences-img { display: flex;}
+  .our-services li { font-size: 16px; }
+  .see-differents h3 { font-size: 19px; }
+  .differences-img li:first-of-type { padding-right: 3px; }
+  .client-review h3 { font-size: 24px; }
+  .client-review li:last-of-type p { margin-left: 0;}
+  .free-opening li {  margin: auto 10%; }
+  .our-customers .wrapper > p {  font-size: 12px; }
+  .our-customers .next { right: -30px; }
+  .our-customers .prev { left: -30px; }
+  .download-info h3 { width: 64%; }
+  .download-info .fas {  left: 9%; }
+  .free-services-container a { font-size: 13px; }
+  .free-services-container li:last-of-type a { font-size: 18px; }
+  .footer-links h5 { font-size: 21px; } 
+
+  .our-customers .next::before,
+  .our-customers .prev::before { font-size: 30px; }
+
+  .download-info input[type=text],
+  .download-info input[type=email] {  padding: 15px 7%; }
+}
