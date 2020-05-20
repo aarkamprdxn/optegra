@@ -56,3 +56,73 @@ function toggleAccordion() {
     }
 }
 // -------------------------------------------------------
+
+// Form Validation Starts ----------------------------
+var messageLength = document.getElementsByClassName('message').length;
+var messageArray = [];
+for (var i = 0; i < messageLength; i++) {
+	messageArray.push(document.getElementsByClassName('message')[i]);
+}
+var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var phoneNo = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+// On Submit Function
+function onFormSubmit() {
+	// Store value from the input given by the user
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var phone = document.getElementById('phone').value;
+	var terms = document.getElementById('terms');
+
+	// For name
+	if (!name) {
+		showMessage(0);
+	} else {
+		hideMessage(0);
+	}
+
+	// For email
+	if (email.match(emailPattern)) {
+		hideMessage(1);
+	} else {
+		showMessage(1);
+	}
+
+	// For Pone
+	if (!phone.match(phoneNo)) {
+		showMessage(2);
+	} else {
+		hideMessage(2);
+	}
+
+	// For Terms
+	if (terms.checked == false) {
+		showMessage(3);
+	} else {
+		hideMessage(3);
+	}
+
+	function showMessage(index) {
+		for (var i = 0; i < messageLength; i++) {
+			messageArray[index].style.opacity = '1';
+			messageArray[index].style.paddingLeft = '16px';
+			messageArray[index].style.transition = '.2s';
+		}
+	}
+
+	function hideMessage(index) {
+		for (var i = 0; i < messageLength; i++) {
+			messageArray[index].style.opacity = '0';
+			messageArray[index].style.paddingLeft = '6px';
+			messageArray[index].style.transition = '.2s';
+		}
+	}
+
+	// Validate if all the data is filled
+	if (!name || !email.match(emailPattern) || !phone.match(phoneNo) || terms.checked == false) {
+		return;
+	} else { 
+		document.querySelector('form').reset();
+		// Reset the current form data
+	}
+}
+// ---------------------------------------------------
