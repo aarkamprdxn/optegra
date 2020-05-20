@@ -913,3 +913,72 @@ footer {
   .faq h3,
   .accordion-section {  width: 64%;}
 }
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  
+  h2 { font-size: 45px; }
+  .banner p,.surgery p { font-size: 16px; }
+  .banner-content a { font-size: 12px; }
+  .banner-content input { width: 14%; padding: 5px 3.2%; }
+  
+  .free-services-container li:nth-child(2),
+  .surgery li:nth-child(2) { margin: 50px auto;}
+  
+  .our-services,
+  .surgery li,.surgery,
+  .free-opening ul,
+  .free-opening li,
+  .free-services-container,
+  .footer-links { display: block; }
+
+  .our-services { padding: 90px 0; }
+
+  .our-services li {
+    width: 33%;
+    margin-bottom: 50px;
+    vertical-align: top;
+    padding-right: 40px;
+  }
+
+  .surgery li { margin: 0 auto; }
+  .see-differents-container {  margin: 106px 10% 118px; }
+  .client-review h3 { font-size: 30px; }
+  .client-review ul { display: block; }
+  .accordion-section,.faq h3 { width: 80%; }
+
+  .free-services-container li,
+  .download-info h3 { width: 50%; }
+  
+  .our-customers li { width: 45%; }
+  .client-review li:first-of-type { margin: 0;}
+
+  .our-customers li:nth-child(2),
+  .our-customers li:nth-child(3) { display: none; }
+
+  .client-review h3 {
+    word-spacing: 10px;
+    text-align: center;
+  }
+
+  .free-opening li:last-of-type {  
+    width: 70%;
+    margin: auto 15%;
+    padding-left: 0;
+  }
+
+  .free-opening li,
+  .footer-links li { margin: auto 25%; }
+  
+  .social-links li { margin: 0; }
+  .footer-links h5 { font-size: 24px; }
+
+  .footer-links > li { 
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+  }
+}
