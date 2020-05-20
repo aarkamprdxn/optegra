@@ -838,7 +838,7 @@ footer {
 
 .top-review-content li:last-child {
   width: 60%;
-  padding: 36px 22px 24px;
+  padding: 30px 22px 24px;
 }
 
 .top-review h5 { 
@@ -867,7 +867,16 @@ footer {
  Laser Eye Replacement styling starts here
 =========================================*/
 
-
+/*media query starts*/
+/*media query for 1300px starts here*/
+@media only screen and (max-width: 1300px) {
+  .top-review p {
+    padding: 10px 0 5px;
+    font-size: 14px;
+  } 
+  .top-review-content li:last-child {  padding: 12px; }
+  .top-review-content img { width: auto;}
+}
 
 /*media query starts*/
 /*media query for 1024px starts here*/
@@ -991,11 +1000,27 @@ footer {
 
   .banner a,
   .surgery a { font-size: 15px; }
+
   .surgery h4 { font-size: 19px;}
   .see-differents h3 { font-size: 31px;}
-
+  .our-customers li { width: 20%; }
+  .star .fas::before { font-size: 10px; }
+  .customer-content p { font-size: 15px;}
+  
   .faq h3,
   .accordion-section {  width: 64%;}
+
+  .top-review p {
+    padding: 20px 0 10px;
+    font-size: 15px;
+  }
+
+  .top-review-content {
+    width: 74%;
+    margin: 0 13% 20px;
+  }
+
+  .top-review-content:nth-child(2n) { padding-left: 0;}
 }
 
 /*media query for 768px starts here*/
@@ -1042,8 +1067,8 @@ footer {
   .our-customers li:nth-child(3) { display: none; }
 
   .client-review h3 {
-    word-spacing: 10px;
     text-align: center;
+    word-spacing: 10px;
   }
   
   .free-opening li:last-of-type {  
@@ -1065,6 +1090,9 @@ footer {
     text-align: center;
     width: auto;
   }
+
+  .top-review-content li:last-child { padding: 20px 22px 16px; }
+  .top-review-content { width: 100%; margin: 0 0 20px; }
 
   .social-links li { margin: 0; }
   .footer-links h5 { font-size: 24px; }
@@ -1113,6 +1141,9 @@ footer {
 
   .download-info input[type=text], 
   .download-info input[type=email] {  width: 50%; }
+
+  .top-review-content li:first-child { display: none;}
+  .top-review-content li:last-child { width: auto; }
 }
 
 /*media query for 375px starts here*/
