@@ -789,27 +789,34 @@ footer {
 
 /* .eye-surgery-review section start */
 
-.eye-surgery-review {  padding: 50px 0;}
+.eye-surgery-review,
+.lens-replacement-faq {  padding: 50px 0;}
 
-.eye-surgery-review ul {
+.eye-surgery-review ul,
+.lens-replacement-faq ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.eye-surgery-review li { width: 43.5%; }
+.eye-surgery-review li,
+.lens-replacement-faq li { width: 43.5%; }
 
-.eye-surgery-review li:first-child { text-align: right; }
+.eye-surgery-review li:first-child,
+.lens-replacement-faq li:first-child { text-align: right; }
 
-.eye-surgery-review h3 { color: #007374; }
+.eye-surgery-review h3,
+.lens-replacement-faq h3 { color: #007374; }
 
-.eye-surgery-review p {
+.eye-surgery-review p,
+.lens-replacement-faq p {
   padding-top: 26px;
   color: #00000099;
   line-height: 1.5;
 }
 
-.eye-surgery-review li img {  
+.eye-surgery-review li img,
+.lens-replacement-faq li img {  
   width: 91.5%;
   border-radius: 50%; 
  }
@@ -1061,6 +1068,7 @@ footer {
   .free-opening li,
   .free-services-container,
   .eye-surgery-review ul,
+  .lens-replacement-faq ul,
   .footer-links { display: block; }
 
   .our-services { padding: 90px 0; }
@@ -1102,13 +1110,15 @@ footer {
   .free-opening li,
   .footer-links li { margin: auto 25%; }
   
-  .eye-surgery-review li:first-child {
+  .eye-surgery-review li:first-child,
+  .lens-replacement-faq li:first-child {
     text-align: center;
     width: 65%;
     margin: 0 18% 20px;
   }
 
-  .eye-surgery-review li {
+  .eye-surgery-review li,
+  .lens-replacement-faq li {
     text-align: center;
     width: auto;
   }
@@ -1143,7 +1153,8 @@ footer {
   .our-customers li p,
   .accordion-head h4,
   .our-customers .wrapper > p,
-  .eye-surgery-review p { font-size: 13px; }
+  .eye-surgery-review p,
+  .lens-replacement-faq p { font-size: 13px; }
   
   .our-services li {  padding-right: 0;}
   .differences-img li:first-of-type { margin: 0;}
