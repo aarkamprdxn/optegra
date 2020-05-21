@@ -169,8 +169,8 @@ nav a span::before { font-size: 16px; }
 
 .dropdown {
   width: 12%;
-  position: absolute;
   display: none;
+  position: absolute;
   background: #f2f2f2;
   text-align: center;
   z-index: 1;
@@ -182,8 +182,8 @@ nav a span::before { font-size: 16px; }
 .dropdown li:hover { background-color: #cef1ea; }
 
 nav li:hover ul.dropdown { 
-  display: block;
   margin-left: -12px;
+  display: block;
   text-align: left;
  } 
 /* header section end */
@@ -221,7 +221,7 @@ h2 {
   background-color: #d3d3d380;
 }
 
-.banner-content label {
+.banner-content h4 {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -256,10 +256,10 @@ h2 {
 
 /* service section start */
 .our-services {
+  padding: 60px 0 148px;
   display: flex;
   justify-content: space-around;
   color: #007374;
-  padding: 60px 0 148px;
   text-align: center;
 }
 
@@ -278,10 +278,10 @@ h2 {
 }
 
 .surgery {
+  margin-bottom: 130px;
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-bottom: 130px;
 }
 
 .surgery li { width: 30%;}
@@ -301,28 +301,28 @@ h2 {
 
 .surgery p,
 .free-services p {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.7);
   padding: 10px 0;
+  color: #000000b3;
+  font-size: 18px;
  }
 
  .surgery a,
  .free-opening a,
  .download-info .form-control a ,
  .free-services a,
- .load-more-btn a {
+ .load-more-box a {
+   padding: 15px 5%;
    border-radius: 24px;
    background-color: #ee5d22;
    color: #fff;
-   padding: 15px 5%;
    font-weight: 600;
   }
   
   .surgery a::after,
   .free-opening a::after {
     content: '\f061';
-    font-family: FontAwesome;
     padding-left: 8px;
+    font-family: FontAwesome;
     font-weight: 400; 
   }
   /* service section end */
@@ -485,12 +485,14 @@ label a { color: #007374; }
 .free-opening p { font-size: 18px; }
 .free-opening li:last-of-type p:first-of-type { padding: 20px 0; }
 
-.free-opening a,
-.download-info .form-control a { margin-top: 20px; }
+.free-opening p:last-of-type { padding-bottom: 20px;}
+.download-info .form-control  { padding-top: 20px; }
 /* free opening section end*/
 
 /* our customer section start */
 .our-customers {  padding: 102px 0 148px; }
+.our-customers li,
+.top-review-content ul { box-shadow: 0 0 5px #888;}
 
 .our-customers .wrapper > p { 
   padding: 16px 0 28px;
@@ -600,7 +602,7 @@ label a { color: #007374; }
 .faq h3{  
   width: 46%;
   padding-bottom: 16px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #d3d3d3;
   margin: 0 auto 10px;
   color: #007374;
 }
@@ -618,7 +620,7 @@ label a { color: #007374; }
 
 .accordion-head {
   width: 100%;
-  border-bottom: 1px solid #a9a9a9;
+  border-bottom: 1px solid #d3d3d3;
   cursor: pointer;
 }
 
@@ -649,7 +651,7 @@ label a { color: #007374; }
 
 /* download-info section start*/
 .download-info { 
-  padding-top: 110px 0 116px;
+  padding: 110px 0 116px;
   text-align: center;
 }
 
@@ -687,7 +689,6 @@ label a { color: #007374; }
 
 .download-info h3 span { border-bottom: 2px solid #70d0ba; }
 .download-info .form-control a { padding: 13px 5%;}
-
 
 .message {
   width: 40%;
@@ -844,7 +845,7 @@ footer {
 }
 
 .top-review-content a { color: #ee5d22; }
-.top-review-content:nth-child(2n) { padding-left: 20px;}
+.top-review-content:nth-child(2n) { margin-left: 20px;}
 
 .top-review-content li:last-child {
   width: 60%;
@@ -871,7 +872,7 @@ footer {
 
 .load-more { display: none;}
 .highlight-review { background-color: #e6f8f4;}
-.load-more-btn { text-align: center;}
+.load-more-box { text-align: center;}
 /* top-review section  end*/
 
 /*========================================
@@ -906,37 +907,60 @@ footer {
   .free-opening a:hover,
   .download-info .form-control a:hover,
   .free-services a:hover,
-  .load-more-btn a:hover { 
-    background-color: #db500b;
-    color: rgba(255,255, 255, 0.5);
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+  .load-more-box a:hover { 
+    border: 2px solid #db500b;
+    margin: -2px;
+    background-color: transparent;
+    color: #db500b;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
   }
-
+  
+  .our-customers li:hover {
+    background-color: #F0FFF0	;
+    box-shadow: 0 0 5px 5px#888;
+    cursor: pointer;
+  }
+  
+  .top-review-content ul:hover {
+    background-color: #ffdb99	;
+    box-shadow: 0 0 5px 5px#888;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+  }
   .top-review-content a:hover,
   .top-review-content a:hover::after {
     color: #70d0ba;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
-
+  
   footer a:hover { 
     text-decoration: underline;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+  -webkit-transform: translateX(6px);
+      -ms-transform: translateX(6px);
+          transform: translateX(6px);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
   }
 
+  footer a:hover::before {
+    padding-right: 5px;
+    content: '\f0a4';
+    font-family: FontAwesome;
+    text-decoration: none;
+  }
   .social-links a:hover {
     color: #66bcd2;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
 
-  .our-customers li:hover,
   .footer-bottom img:hover {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.8);
+    cursor: pointer;
     transition: all .4s ease-in-out;
   }
 }
@@ -1041,7 +1065,7 @@ footer {
     margin: 0 13% 20px;
   }
 
-  .top-review-content:nth-child(2n) { padding-left: 0;}
+  .top-review-content:nth-child(2n) { margin-left: 0;}
 }
 
 /*media query for 768px starts here*/
@@ -1061,6 +1085,12 @@ footer {
 
   .free-services-container li:nth-child(2),
   .surgery li:nth-child(2) { margin: 50px auto;}
+  
+  .surgery a,
+  .free-opening a,
+  .download-info .form-control a ,
+  .free-services a,
+  .load-more-box a { padding: 15px 7%;}
   
   .our-services,
   .surgery li,.surgery,
@@ -1145,11 +1175,15 @@ footer {
   
   h2 {font-size: 35px;}
   .banner form {  display: none; }
-  .banner { padding: 200px 0 110px; };
+  .banner { padding: 200px 0 110px; }
   .banner ul { display: flex; }
   .see-differents h3 { font-size: 21px; }
   
   .surgery a,
+  .free-opening a,
+  .download-info .form-control a ,
+  .free-services a,
+  .load-more-box a
   .our-customers li p,
   .accordion-head h4,
   .our-customers .wrapper > p,
