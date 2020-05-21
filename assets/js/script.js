@@ -172,4 +172,18 @@ function displayCarousel(n) {
   carousel[carouselIndex - 1].style.display = 'block';
 }
 
-
+// Load More Function Start ============================
+var loadBtn = document.getElementById('control');
+var block = document.getElementsByClassName("load-more");
+var blockLength = block.length;
+var count = 0;
+// added function for displaying blocks or hiding blocks
+function loadMore() {
+  for (var i = count; i < count + 2 && i < blockLength; i++) {
+    block[i].style.display = "inline-block";
+  }
+  count = count + 2;
+  if (count >= blockLength) {
+    loadBtn.style.display = 'none';
+  }
+}
