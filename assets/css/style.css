@@ -310,7 +310,7 @@ h2 {
  .free-opening a,
  .download-info .form-control a ,
  .free-services a,
- .load-more a {
+ .load-more-btn a {
    border-radius: 24px;
    background-color: #ee5d22;
    color: #fff;
@@ -534,12 +534,12 @@ label a { color: #007374; }
   font-size: 16px;
 }
 
-/* Curousal Section */
-.slideshow-container { position: relative; }
+/* Carousel Section */
+.carousel-container { position: relative; }
 
-/* Next & previous buttons */
-.our-customers .prev,
-.our-customers .next {
+/* right & leftious buttons */
+.our-customers .left,
+.our-customers .right {
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -558,22 +558,22 @@ label a { color: #007374; }
           user-select: none;
 }
 
-.our-customers .prev::before { content: '\f104';}
+.our-customers .left::before { content: '\f104';}
 
-.our-customers .next::before { content: '\f105';}
+.our-customers .right::before { content: '\f105';}
 
-.our-customers .prev::before,
-.our-customers .next::before { 
+.our-customers .left::before,
+.our-customers .right::before { 
   font-family:  FontAwesome;
   font-size: 50px;
  }
 
-.our-customers .prev { left: -5%; }
-.our-customers .next { right: -5%; }
+.our-customers .left { left: -5%; }
+.our-customers .right { right: -5%; }
 
 /* On hover, add a black background color with a little bit see-through */
-.our-customers .prev:hover,
-.our-customers .next:hover {  color: #3daca5;}
+.our-customers .left:hover,
+.our-customers .right:hover {  color: #3daca5;}
 
 .fade-right {
   -webkit-animation-name: fade-right;
@@ -610,19 +610,19 @@ label a { color: #007374; }
   margin: 0 auto;
 }
 
-.accordion-title h4 {
+.accordion-head h4 {
   padding: 16px 0 26px;
   font-size: 18px;
   font-weight: 600;
 }
 
-.accordion-title {
+.accordion-head {
   width: 100%;
   border-bottom: 1px solid #a9a9a9;
   cursor: pointer;
 }
 
-.accordion-data {
+.accordion-content {
   max-height: 0;
   font-size: 14px;
   overflow: hidden;
@@ -630,9 +630,9 @@ label a { color: #007374; }
   transition: .2s;
 }
 
-.accordion-data p {  padding: 10px 0 25px; }
+.accordion-content p {  padding: 10px 0 25px; }
 
-.accordion-title h4:after {
+.accordion-head h4:after {
   content: '\f078';
   float: right;
   font-family: "fontawesome";
@@ -640,10 +640,10 @@ label a { color: #007374; }
   color: #ee5d22;
 }
 
-.accordion-title h4.active:after { content: '\f077'; }
+.accordion-head h4.active:after { content: '\f077'; }
 
-.accordion-title:hover,
-.accordion-title.active { color: #ee5d22; }
+.accordion-head:hover,
+.accordion-head.active { color: #ee5d22; }
 /* faq section end */
 
 
@@ -798,7 +798,9 @@ footer {
 }
 
 .eye-surgery-review li { width: 43.5%; }
+
 .eye-surgery-review li:first-child { text-align: right; }
+
 .eye-surgery-review h3 { color: #007374; }
 
 .eye-surgery-review p {
@@ -860,8 +862,9 @@ footer {
   font-family: FontAwesome;
 }
 
+.load-more { display: none;}
 .highlight-review { background-color: #e6f8f4;}
-.load-more { text-align: center;}
+.load-more-btn { text-align: center;}
 /* top-review section  end*/
 
 /*========================================
@@ -896,7 +899,7 @@ footer {
   .free-opening a:hover,
   .download-info .form-control a:hover,
   .free-services a:hover,
-  .load-more a:hover { 
+  .load-more-btn a:hover { 
     background-color: #db500b;
     color: rgba(255,255, 255, 0.5);
     -webkit-transition: all .3s ease-in-out;
@@ -1006,16 +1009,18 @@ footer {
   /* hamburger end */
   
   .header-top-content { display: none; }
-
-  .banner a,
-  .surgery a { font-size: 15px; }
-
+  .banner-content a { font-size: 12px; }
+  .banner-content input { width: 14%; }
   .surgery h4 { font-size: 19px;}
+  
+  .surgery a,
+  .customer-content p { font-size: 15px; }
+  
   .see-differents h3 { font-size: 31px;}
   .our-customers li { width: 20%; }
   .star .fas::before { font-size: 10px; }
-  .customer-content p { font-size: 15px;}
-
+  .download-info .fas { left: 4.5%;}
+  
   .faq h3,
   .accordion-section {  width: 64%;}
 
@@ -1036,10 +1041,17 @@ footer {
 @media only screen and (max-width: 768px) {
   
   h2 { font-size: 45px; }
-  .banner p,.surgery p { font-size: 16px; }
-  .banner-content a { font-size: 12px; }
-  .banner-content input { width: 14%; padding: 5px 3.2%; }
-  
+  .banner p { font-size: 20px; }
+  .surgery p { font-size: 16px; }
+  .banner-content input { width: 20%;}
+  .banner .fas { left: 4.3%; }
+
+  .banner-content a {
+    padding: 20px 11%;
+    margin: 20px 30% 0;
+    font-size: 11px;
+  }
+
   .free-services-container li:nth-child(2),
   .surgery li:nth-child(2) { margin: 50px auto;}
   
@@ -1072,6 +1084,7 @@ footer {
   .our-customers li { width: 45%; }
   .client-review li:first-of-type { margin: 0;}
 
+  
   .our-customers li:nth-child(2),
   .our-customers li:nth-child(3) { display: none; }
 
@@ -1122,11 +1135,13 @@ footer {
   
   h2 {font-size: 35px;}
   .banner form {  display: none; }
+  .banner { padding: 200px 0 110px; };
+  .banner ul { display: flex; }
   .see-differents h3 { font-size: 21px; }
   
   .surgery a,
   .our-customers li p,
-  .accordion-title h4,
+  .accordion-head h4,
   .our-customers .wrapper > p,
   .eye-surgery-review p { font-size: 13px; }
   
@@ -1145,8 +1160,8 @@ footer {
   .our-customers li { width: 70%; }
   .download-info .fas { left: 6%; }
   
-  .our-customers .next::before,
-  .our-customers .prev::before { font-size: 36px; }
+  .our-customers .right::before,
+  .our-customers .left::before { font-size: 36px; }
 
   .download-info input[type=text], 
   .download-info input[type=email] {  width: 50%; }
@@ -1165,16 +1180,16 @@ footer {
   .client-review li:last-of-type p { margin-left: 0;}
   .free-opening li {  margin: auto 10%; }
   .our-customers .wrapper > p {  font-size: 12px; }
-  .our-customers .next { right: -30px; }
-  .our-customers .prev { left: -30px; }
+  .our-customers .right { right: -30px; }
+  .our-customers .left { left: -30px; }
   .download-info h3 { width: 64%; }
   .download-info .fas {  left: 9%; }
   .free-services-container a { font-size: 13px; }
   .free-services-container li:last-of-type a { font-size: 18px; }
   .footer-links h5 { font-size: 21px; } 
 
-  .our-customers .next::before,
-  .our-customers .prev::before { font-size: 30px; }
+  .our-customers .right::before,
+  .our-customers .left::before { font-size: 30px; }
 
   .download-info input[type=text],
   .download-info input[type=email] {  padding: 15px 7%; }
