@@ -901,6 +901,12 @@ footer {
     transition: all .2s ease-in-out;
   }
   
+  .header-top-content li:last-of-type a:hover {
+    background-color: #db500b;
+    color: #e1ffff80;
+    transform: all .2s ease-in-out;
+  }
+
   .header-top-content li:last-of-type:hover,
   .banner-content a:hover,
   .surgery a:hover,
@@ -921,6 +927,7 @@ footer {
     background-color: #F0FFF0	;
     box-shadow: 0 0 5px 5px#888;
     cursor: pointer;
+    transition: all .4s ease-in-out;
   }
   
   .top-review-content ul:hover {
