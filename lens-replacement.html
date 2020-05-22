@@ -1,6 +1,7 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Home | Lens Replacement</title>
@@ -13,6 +14,7 @@
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
+
 <body>
     <!--container start-->
     <div class="container">
@@ -115,8 +117,8 @@
                 <div class="wrapper">
                     <ul>
                         <li>
-                            <figure>
-                                <img src="https://via.placeholder.com/502x448" alt="lens-replacement-img">
+                            <figure onclick="openLightbox();">
+                                <img src="https://via.placeholder.com/502x448?text=Lens" alt="lens-replacement-img">
                             </figure>
                         </li>
                         <li class="lens-replacement-text">
@@ -126,6 +128,15 @@
                                 the answers to the most asked questions about lens replacement treatment.</p>
                         </li>
                     </ul>
+                    <div class="lightbox">
+                        <span class="close cursor" onclick="closeLightbox()">&times;</span>
+                        <div class="modal-content">
+                            <!-- Images -->
+                            <figure class="mySlides">
+                                <img src="https://via.placeholder.com/1920x1080?text=Lens" alt="gallery-pic">
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- lens replacement faq sect ion end -->
@@ -479,4 +490,5 @@
     <!--container end-->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
