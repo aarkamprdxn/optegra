@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -99,56 +100,1238 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1520px;
+  width: 83.5%; 
   margin: 0 auto;
 }
+
+/* common styling */
+h3 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.header-top-content li a,
+.banner-content > p,
+.banner-content h4,
+.banner-content a,
+.our-services p,
+.surgery p,
+.free-services p,
+.client-review li:last-of-type p,
+.free-opening p,
+.customer-content,
+.accordion-head h4,
+.footer-links h5 {
+  font-size: 18px;
+} 
+
+.menu,
+.our-services,
+.surgery,
+.free-services-container,
+.our-customers ul,
+.eye-surgery-review ul,
+.lens-replacement-faq ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+
 /*=================================
   Header styling starts here
 =================================*/
 
+/* header section start */
+header .wrapper { width: 100%; }
+header { border-bottom: 1px solid #d3d3d3; }
 
+.header-top {
+  border-bottom: 1px solid #d3d3d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+h1 { padding: 0 5px; }
+.header-top-content li a { color: #000; }
 
+.header-top-content li:last-of-type a {
+  padding: 35px 52px;
+  color: #fff;
+}
 
+.header-top-content li:nth-child(2) a { margin: 0 36px; }
+.header-top-content li:last-of-type { background-color: #ee5d22; }
+
+.header-top-content li a::before {
+  margin-right: 7px;
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+
+.header-top-content li:first-of-type a::before { content: '\f041'; }
+.header-top-content li:nth-child(2) a::before { content: '\f095'; }
+.header-top-content li:last-of-type a::before { content: '\f133'; }
+.menu { margin: 0 4.5% 0 6%; }
+
+.header-bottom a { 
+  padding: 16px 0;
+  color: #66bcd2;
+}
+
+nav li { padding: 0 12px; }
+nav a span {  font-size: 0px; }
+nav a span::before { font-size: 16px; }
+.hamburger span { display: none; }
+.menu { position: relative; }
+
+.dropdown {
+  max-width: 224px;
+  width: 100%;
+  display: none;
+  position: absolute;
+  background: #f2f2f2;
+  text-align: center;
+  z-index: 1;
+}
+
+.dropdown li { display: block; z-index: 3; }
+.dropdown li:hover { background-color: #cef1ea; }
+
+nav li:hover ul.dropdown { 
+  margin-left: -12px;
+  display: block;
+  text-align: left;
+ } 
+ /* header section end */
+
+ /*=================================
+  Header styling end here
+=================================*/
 
 /*=================================
-  Header styling ends here
+  Home styling starts here
+=================================*/
+
+/* banner section start */
+.banner {
+  padding: 104px 0 92px;
+  border-bottom-left-radius: 50% 3.5%;
+  border-bottom-right-radius: 50% 3.5%;
+  background: #91c299 url(https://via.placeholder.com/1520x620/91c299/91c299?text=Optegra) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+h2 { 
+  color:#fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.banner-content { margin: 0 8.7%; }
+.banner-content li:first-child { margin-right: 3.7%; }
+
+.banner-content > p { 
+  padding: 34px 0 36px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.banner-content form {
+  padding: 28px 2.5%;
+  border-bottom: 36px solid #ffffff4d;
+  margin-top: 40px;
+  background-color: #d3d3d380;
+}
+
+.banner-content h4 {
+  color: #fff;
+  font-weight: 600;
+}
+
+.banner-content .form-group { padding-top: 7px; }
+.banner-content input { margin-right: 4px; }
+
+.banner-content input,
+.banner-content a {
+  width: 15%;
+  padding: 14px 3.2%;
+}
+
+.banner-content a {
+  border-radius: 25px;
+  background-color: #ee5d22;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.banner-content a::before,
+.free-services-container li:first-of-type a::before {
+  content: '\f019';
+  padding-right: 5px;
+  font-family: FontAwesome;
+  font-weight: 400;
+}
+/* banner section end */
+
+/* service section start */
+.our-services {
+  padding: 60px 0 148px;
+  color: #007374;
+  text-align: center;
+}
+
+.our-services span,
+.free-services span { font-size: 0px; }
+.our-services span::before,
+.free-services span::before { font-size: 48px; }
+.our-services li { width: 20%; }
+
+.our-services p { 
+  padding-top: 16px;
+  line-height: 1.6;
+}
+
+.surgery {
+  margin-bottom: 130px;
+  text-align: center;
+}
+
+.surgery li { width: 30%;}
+
+.surgery img {
+  width: 86%;
+  border-radius: 50%;
+}
+
+.surgery h4,
+.free-services h4 {
+  padding-top: 20px;
+  color: #007374;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.surgery p,
+.free-services p {
+  padding: 10px 0;
+  color: #000000b3;
+ }
+
+ .surgery a,
+ .free-opening a,
+ .download-info .form-control a,
+ .free-services a,
+ .load-more-box a {
+   padding: 15px 5%;
+   border-radius: 24px;
+   background-color: #ee5d22;
+   color: #fff;
+   font-weight: 600;
+  }
+  
+  .surgery a::after,
+  .free-opening a::after {
+    content: '\f061';
+    padding-left: 8px;
+    font-family: FontAwesome;
+    font-weight: 400; 
+  }
+  /* service section end */
+  
+  /* see different section start */
+  .see-differents,
+  footer {
+    border-top: 1px solid #d3d3d3;
+    border-top-left-radius: 50% 5%;
+    border-top-right-radius: 50% 5%;
+  }
+    
+  .see-differents h3 {
+    margin-bottom: 20px;
+    color: #007374;
+  }
+  
+  .see-differents p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+.see-differents-container { margin: 106px 25% 118px; }
+.see-differents p:last-of-type { margin-bottom: 70px; }
+.see-differents-container p span { color: #007374; }
+
+.differences-list h5 {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-left: 5%;
+  color: #007374;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.differences-list span {
+  width: 20%;
+  padding: 10px 15px;
+  border-radius: 50%;
+  background-color: #91c299;
+  color: #d3d3d3;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.differences-list-content { 
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.differences-list-content ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.differences-list li:first-of-type span { background-color: #2f6f73; }
+.differences-list li:nth-child(2) span { background-color: #2f6f73; opacity: 0.7; }
+.differences-list li:nth-child(3) span { background-color: #2f6f73; opacity: 0.3; }
+.differences-list li:nth-child(4) span { background-color: #2f6f73; opacity: 0.5; }
+.differences-list li:nth-child(5) span { background-color: #2f6f73; opacity: 0.8; }
+.differences-img li:first-of-type { margin: 4px 7% 0 10%; }
+/* see different section end */
+
+/* client review section start */
+.client-review,
+.our-customers,
+.download-info {
+  padding: 102px 0 102px;
+  border-top: 1px solid #d3d3d3;
+  border-top-left-radius: 50% 5%;
+  border-top-right-radius: 50% 5%;
+  border-bottom: 1px solid #d3d3d3;
+  border-bottom-left-radius: 50% 5%;
+  border-bottom-right-radius: 50% 5%;
+  background-color: #cef1ea;
+}
+
+.client-review h3 {
+  margin: 0 7%;
+  font-weight: 700;
+}
+
+.client-review ul {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.client-review li:first-of-type { margin-left: 10%; }
+.client-review img { border-radius: 50%; }
+.client-review li:first-of-type p { font-size: 14px; }
+
+.client-review h5 {
+  padding-bottom: 3px;
+  margin-top: 12px;
+  font-weight: 600;
+  -webkit-text-decoration: underline #66bcd2;
+          text-decoration: underline #66bcd2;
+}
+
+.client-review li:last-of-type p { 
+  padding: 34px 68px;
+  border-radius: 22px;
+  margin-top: 54px;
+  margin-left: 15%;
+  position: relative;
+  background-color: #fff;
+  color: #00000099;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.client-review li:last-of-type p::before {
+  content: '\f10d';
+  position: absolute;
+  top: 30px;
+  left: 3.5%;
+  color: #66bcd2;
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+
+.client-review li:last-of-type p::after {
+  content: '\f10e';
+  color: #66bcd2;
+  position: absolute;
+  right: 10%;
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+
+.quote {
+  width: 5%;
+  height: 40px;
+  border-bottom-right-radius: 100%;
+  margin-left: 22%;
+  background-color: #fff;
+  font-size: 0;
+}
+/* client review section end*/
+
+/* free opening section start*/
+.free-opening ul {
+  padding: 128px 7% 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.free-opening h3,
+ .download-info .form-group a { color: #007374; }
+
+.free-opening li:first-child span::before { 
+  color: #70d0ba;
+  font-size:  180px;
+}
+
+.free-opening li:last-of-type {
+  width: 55%;
+  padding-top: 54px;
+  padding-left: 4.5%;
+}
+
+.free-opening li:first-child span { font-size:  0; }
+.free-opening li:last-of-type p:first-of-type { padding: 20px 0; }
+.free-opening p:last-of-type { padding-bottom: 20px; }
+.download-info .form-control  { padding-top: 20px; }
+/* free opening section end*/
+
+/* our customer section start */
+.our-customers {  padding: 102px 0 148px; }
+.our-customers ul {  -webkit-box-align: center;  -ms-flex-align: center;  align-items: center; }
+
+.our-customers .wrapper > p { 
+  padding: 16px 0 28px;
+  font-weight: 600; 
+}
+
+.our-customers p span::before {
+  content: '\f005';
+  color: #00b67a;
+  font-family: FontAwesome;
+}
+
+.our-customers li {
+  width: 24%;
+  padding: 22px 30px 50px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.star .fas {
+  padding: 5px;
+  margin-bottom: 18px;
+  background-color: #00b67a;
+  color: #fff;
+  font-size: 0px;
+}
+
+.star .fas::before { font-size: 16px; }
+.customer-content h5 { font-weight: 600; }
+.customer-content p { padding: 10px 0; }
+.carousel-container { position: relative; }
+
+.customer-content span {
+  color: #a9a9a9;
+  font-size: 16px;
+}
+
+.our-customers .left,
+.our-customers .right {
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  position: absolute;
+  top: 40%;
+  color: #a9a9a9;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0px;
+  -webkit-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.our-customers .left { left: -5%; }
+.our-customers .right { right: -5%; }
+.our-customers .left::before { content: '\f104'; }
+.our-customers .right::before { content: '\f105'; }
+
+.our-customers .left::before,
+.our-customers .right::before { 
+  font-family:  FontAwesome;
+  font-size: 50px;
+ }
+
+.our-customers .left:hover,
+.our-customers .right:hover { color: #3daca5; }
+
+.fade-right {
+  -webkit-animation-name: fade-right;
+          animation-name: fade-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes fade-right {
+  from { opacity: 0; -webkit-transform: translateX(-18px); transform: translateX(-18px); }
+  to { opacity: 1; -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+@keyframes fade-right {
+  from { opacity: 0; -webkit-transform: translateX(-18px); transform: translateX(-18px); }
+  to { opacity: 1; -webkit-transform: translateX(0); transform: translateX(0); }
+}
+/* our customer section end */
+
+/* faq section start */
+.faq,
+.free-services { padding: 96px 0 98px; }
+
+.faq h3 {  
+  width: 46%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0 auto 10px;
+  color: #007374;
+}
+
+.accordion-section {
+  width: 46%;
+  margin: 0 auto;
+}
+
+.accordion-head h4 {
+  padding: 16px 0 26px;
+  font-weight: 600;
+}
+
+.accordion-head {
+  width: 100%;
+  border-bottom: 1px solid #d3d3d3;
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  font-size: 14px;
+  overflow: hidden;
+  text-align: left;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.accordion-head h4:after {
+  content: '\f078';
+  color: #ee5d22;
+  float: right;
+  font-family: "fontawesome";
+  font-size: 16px;
+}
+
+.accordion-content p { padding: 10px 0 25px; }
+.accordion-head:hover,
+.accordion-head.active { color: #ee5d22; }
+.accordion-head h4.active:after { content: '\f077'; }
+/* faq section end */
+
+/* download-info section start*/
+.download-info { 
+  padding: 110px 0 116px;
+  text-align: center;
+}
+
+.download-info .form-group,
+.footer-links li {  display: block;}
+
+.download-info input[type=text],
+.download-info input[type=email]{
+  width: 40%;
+  padding: 15px 4%;
+  margin: 0 auto;
+}
+
+.download-info h3 {
+  width: 48%;
+  margin: 0 auto 48px;
+}
+
+.download-info .fas,
+.banner .fas {  
+  position: relative;
+  left: 3%;
+  color: #a9a9a9;
+  font-size: 0;
+}   
+
+.download-info input::-webkit-input-placeholder, .banner input::-webkit-input-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input::-moz-placeholder, .banner input::-moz-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input:-ms-input-placeholder, .banner input:-ms-input-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input::-ms-input-placeholder, .banner input::-ms-input-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input::placeholder,
+.banner input::placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}
+
+.download-info .fas::before,
+.banner .fas::before { font-size: 14px; }
+
+.download-info h3 span { border-bottom: 2px solid #70d0ba; }
+.download-info .form-control a { padding: 13px 5%; }
+
+.message {
+  width: 40%;
+  margin: 3px auto 15px;
+  color: #f00;
+  font-size: 14px;
+  opacity: 0;
+  text-align: left
+}
+/* download-info section end*/
+
+/* free service section start */
+.free-services-container {
+  color: #007374;
+  text-align: center;
+}
+
+.free-services-container li { width: 30%; }
+.call { font-size: 22px; }
+
+.free-services-container p { 
+  padding-bottom: 24px; 
+  font-size: 16px;
+} 
+
+.free-services-container li:last-child a {
+  background-color: #fff;
+  color: #000;
+}
+/* free service section end */
+
+/*=================================
+  Home styling ends here
+=================================*/
+
+/*===================================
+  Laser Eye Surgey styling start here
+====================================*/ 
+
+/* .eye-surgery-review section start */
+.eye-surgery-review,
+.lens-replacement-faq {  padding: 50px 0;}
+.eye-surgery-review ul,
+.lens-replacement-faq ul { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.eye-surgery-review li,
+.lens-replacement-faq li { width: 43.5%; }
+.eye-surgery-review li:first-child,
+.lens-replacement-faq li:first-child { text-align: right; }
+.eye-surgery-review h3,
+.lens-replacement-faq h3 { color: #007374; }
+
+.eye-surgery-review p,
+.lens-replacement-faq p {
+  padding-top: 26px;
+  color: #00000099;
+  line-height: 1.5;
+}
+
+.eye-surgery-review li img,
+.lens-replacement-faq li img {  
+  width: 91.5%;
+  border-radius: 50%; 
+}
+
+.lens-replacement-faq li img:hover {
+  -webkit-box-shadow: 0 0 6px #000;
+          box-shadow: 0 0 6px #000;
+  cursor: pointer;
+}
+/*eye-surgery-review section end */ 
+
+ /*=================================
+  Laser Eye Surgey styling ends here
+===================================*/ 
+
+/*=================================
+  Lens Replacement styling start here
+=================================*/ 
+
+/* .lens-replacement-faq section start */
+ .lightbox {
+   width: 100%;
+   height: 100%;
+   padding: 72px 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #000000;
+   opacity: 0;
+   -webkit-transform: scale(0, 0);
+       -ms-transform: scale(0, 0);
+           transform: scale(0, 0);
+   -webkit-transition: .2s;
+   -o-transition: .2s;
+   transition: .2s;
+   z-index: 2;
+}
+
+.modal-content {
+  max-width: 1200px;
+  width: 70%;
+  padding: 0;
+  margin: auto;
+  position: relative;
+  background-color: #fefefe;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 42px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* .lens-replacement-faq section end */
+ 
+/* top-review section  start*/
+.top-review {
+  padding: 124px 0 94px;
+  border-bottom-left-radius: 50% 3.5%;
+  border-bottom-right-radius: 50% 3.5%;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.top-review-content {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.top-review-content ul {
+  border: 1px solid #a9a9a9;
+  border-radius: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.top-review-content a { color: #ee5d22; }
+.top-review-content:nth-child(2n) { margin-left: 20px; }
+
+.top-review-content li:last-child {
+  width: 60%;
+  padding: 30px 22px 24px;
+}
+
+.top-review h5 { 
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.top-review p {
+  padding: 20px 0 10px;
+  font-size: 16px;
+}
+
+.top-review-content a::after {
+  content: '\f0a9';
+  padding-left: 7px;
+  color: #ee5d22;
+  font-size: 20px;
+  font-family: FontAwesome;
+}
+
+.load-more { display: none;}
+.highlight-review { background-color: #e6f8f4; }
+.load-more-box { text-align: center; }
+/* top-review section  end*/
+
+/*=================================
+  Lens Replacement styling end here
 =================================*/  
 
 /*=================================
-  main styling starts here
-=================================*/
-
-
-
-
-
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
+  Footer styling start here
 =================================*/ 
 
-
-
-
-
-
-
+footer {
+  padding: 118px 0 80px;
+  background-color: #007374;
+ }
+ 
+ .footer-links {
+   display:-webkit-box;
+   display:-ms-flexbox;
+   display:flex;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   vertical-align: top;
+ }
+ 
+ .footer-links > li { width: 22%; }
+ 
+ .footer-links h5 { 
+   margin-bottom: 30px;
+   color: #fff;
+   font-weight: 600;
+ }
+ 
+ .footer-links a ,
+ .footer-links p {
+   color: #fff;
+   line-height: 1.8;
+ }
+ 
+ .footer-top > p {
+   width: 70%;
+   padding: 50px 0 50px;
+   margin: 0 auto;
+   color: #fff;
+   font-size: 12px;
+   text-align: center;
+ }
+ 
+ .footer-top { border-bottom: 1px solid #fff; }
+ .social-links li { display: inline-block; }
+ .social-links span::before { font-size: 16px; }
+ 
+ .social-links span {  
+   padding: 5px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   margin-right: 5px;
+   font-size: 0;
+ }
+ 
+ .footer-bottom {
+   padding-top: 40px;
+   color: #fff;
+   text-align: center;
+ }
+ 
+ .footer-bottom h5 { font-weight: 600; }
+ .footer-bottom p { font-size: 12px; }
+ .footer-bottom li { width: 10%; }
+ .footer-bottom figure { padding: 28px 3%; }
+ 
  /*=================================
-  footer styling ends here
-=================================*/ 
-
+   Footer styling ends here
+ =================================*/ 
+ 
 /*media query starts*/
+/*media query for 1300px starts here*/
+@media only screen and (max-width: 1300px) {
+  .menu { margin: 0; }
+  nav li { padding: 0; }
+  .header-bottom a { padding: 16px 5px; }
+  nav li:hover ul.dropdown { margin-left: 0; }
+
+  .client-review li:last-of-type p {
+   padding: 24px 68px; 
+    margin-top: 9px;
+    margin-left: 15%
+  }
+
+  .top-review p {
+    padding: 10px 0 5px;
+    font-size: 14px;
+  }
+   
+  .top-review-content li:last-child { padding: 12px; }
+  .top-review-content img { width: auto; }
+}
+
+/*media query for 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+  nav li:hover { background-color: #007374; }
+  nav a:hover,nav span:hover { color: #fff; }
+  
+  .header-top-content a:hover { 
+    color: #ee5d22; 
+    -webkit-transition: all .2s ease-in-out; 
+    -o-transition: all .2s ease-in-out; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .header-top-content li:last-of-type a:hover {
+    background-color: #db500b;
+    color: #e1ffff80;
+  }
+
+  .banner-content a:hover,
+  .surgery a:hover,
+  .free-opening a:hover,
+  .download-info .form-control a:hover,
+  .free-services a:hover,
+  .load-more-box a:hover { 
+    border: 2px solid #db500b;
+    margin: -2px;
+    background-color: transparent;
+    color: #db500b;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  
+  .top-review-content a:hover,
+  .top-review-content a:hover::after {
+    color: #70d0ba;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+
+  .social-links a:hover {
+    -webkit-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+        transform: scale(1.5);
+  }
+
+}
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  /* hamburger  start*/
+  .hamburger {
+    padding: 12px;
+    margin: -12px;
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 22px;
+    cursor: pointer;
+  }
+
+  .hamburger > span {
+    width: 36px;
+    height: 4px;
+    display: block;
+    border-radius: 3px;
+    margin: 5px 0;
+    background-color: #007374;
+    text-indent: -9999px;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  
+  .hamburger-active > span:nth-child(1) {
+    background-color: #dc143c;
+    margin: 0;
+    -webkit-transform: translate(-5px,5px) rotate(45deg);
+        -ms-transform: translate(-5px,5px) rotate(45deg);
+            transform: translate(-5px,5px) rotate(45deg);
+  }
+  
+  .hamburger-active > span:nth-child(2) {
+    background-color: #8a2be2;
+    margin: 0;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .hamburger-active > span:nth-child(3) {
+    background-color: #dc143c;
+    margin: 0;
+    -webkit-transform: translate(-6px,-5px) rotate(-45deg);
+        -ms-transform: translate(-6px,-5px) rotate(-45deg);
+            transform: translate(-6px,-5px) rotate(-45deg);
+  }
+  
+  .menu {
+    max-width: 200px;
+    min-width: 200px;
+    width: 30%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateY(-1000px);
+        -ms-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .dropdown {
+    right: -200px;
+    margin-top: -56px;
+  }
+  
+  .navScale {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    z-index: 2;
+  }
+
+  nav ul li { padding: 5px; }
+  .menu li:hover { background-color: #cef1ea; }
+  .menu li a { border: none; }
+
+  .menu li {
+    display: block;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  /* hamburger end */
+  
+  .header-top-content,
+  .banner form,
+  .quote { display: none; }
+  .banner { padding: 200px 0 110px; }
+  .banner-content a,
+  .surgery a { font-size: 12px; }
+  .banner-content input { width: 14%; }
+  .our-services p { line-height: 1.5; }
+  .surgery h4 { font-size: 19px;}
+  .customer-content p { font-size: 15px; }
+  .see-differents h3 { font-size: 31px; }
+  .our-customers li { width: 20%; }
+  .star .fas::before { font-size: 10px; }
+  .download-info .fas { left: 4.5%; }
+  .faq h3,
+  .accordion-section { width: 64%; }
+  .our-services { display: inline-block; }
+  
+  .our-services li {
+    width: 33%;
+    padding-left: 40px;
+    margin-bottom: 50px;
+    vertical-align: top;
+  }
+
+  .top-review p {
+    padding: 20px 0 10px;
+    font-size: 15px;
+  }
+
+  .top-review-content,
+  .top-review-content:nth-child(2n) {
+    width: 74%;
+    margin: 0 13% 20px;
+  }
+
+}
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  h2 { font-size: 45px; }
+  .banner p { font-size: 20px; }
+  .surgery p { font-size: 16px; }
+  .banner-content input { width: 20%; }
+  .banner .fas { left: 4.3%; }
+
+  .banner-content a {
+    padding: 20px 11%;
+    margin: 20px 30% 0;
+    font-size: 11px;
+  }
+
+  .free-services-container li:nth-child(2),
+  .surgery li:nth-child(2) { margin: 50px auto; }
+  .surgery a,
+  .free-opening a,
+  .download-info .form-control a ,
+  .free-services a,
+  .load-more-box a { padding: 15px 7%; }
+  .our-services,
+  .surgery li,.surgery,
+  .free-opening ul,
+  .free-opening li,
+  .free-services-container,
+  .eye-surgery-review ul,
+  .lens-replacement-faq ul,
+  .footer-links { display: block; }
+  .our-services { padding: 90px 0; }
+  .surgery li,
+  .surgery img { width: 60%; }
+  .our-services p { font-size: 15px; }
+  .surgery li { margin: 0 auto; }
+  .see-differents-container {  margin: 106px 10% 118px; }
+  .client-review h3 { font-size: 30px; }
+  .client-review ul { display: block; }
+  .free-opening ul { padding: 128px 0 94px; }
+  .accordion-section,
+  .faq h3 { width: 80%; }
+  .free-services-container li,
+  .download-info h3 { width: 50%; }
+  .our-customers li { width: 45%; }
+  .client-review li:first-of-type { margin: 0; }
+  .our-customers li:nth-child(2),
+  .our-customers li:nth-child(3) { display: none; }
+  .client-review h3 {  text-align: center; }
+  .client-review li:last-of-type p { margin: 20px 0; }
+  .top-review-content li:last-child { padding: 20px 22px 16px; }
+
+  .free-opening li:last-of-type {  
+    width: 70%;
+    padding-left: 0;
+    margin: auto 15%;
+  }
+  
+  .free-opening li,
+  .footer-links li { margin: auto 25%; }
+  
+  .eye-surgery-review li:first-child,
+  .lens-replacement-faq li:first-child {
+    width: 65%;
+    margin: 0 18% 20px;
+    text-align: center;
+  }
+
+  .eye-surgery-review li,
+  .lens-replacement-faq li {
+    width: auto;
+    text-align: center;
+  }
+
+  .top-review-content,
+  .top-review-content:nth-child(2n) { 
+    width: 100%;
+     margin: 0 0 20px;
+  }
+  
+  .social-links li { margin: 0; }
+  .footer-links h5 { font-size: 24px; }
+
+  .footer-links > li { 
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #91c299;
+    color: #007374;
+  }
+}
 
 
-
-}  
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .banner .wrapper,
+  .services .wrapper,
+  .see-differents .wrapper,
+  .free-opening .wrapper,
+  .faq .wrapper,
+  .free-services .wrapper { width: 100%; }
+  .download-info .wrapper { width: 90%; }
+  .dropdown { right: -74px; margin-top: -6px; }
+  h2 { font-size: 35px; }
+  .top-review-content li:first-child { display: none; }
+  .banner ul,.differences-img { display: -webkit-box; display: -ms-flexbox; display: flex; }
+  .our-services li { font-size: 16px; }
+  .see-differents h3 { font-size: 19px; }
+  .differences-img li:first-of-type { padding-right: 3px; }
+  .surgery a { font-size: 9px; }
+  .free-opening a,
+  .download-info .form-control a ,
+  .free-services a,
+  .load-more-box a 
+  .free-services-container a { font-size: 10px; }
+  .our-customers li p,
+  .accordion-head h4,
+  .our-customers .wrapper > p,
+  .eye-surgery-review p,
+  .lens-replacement-faq p { font-size: 13px; }
+  .our-services li { padding-left: 0; }
+  .differences-img li:first-of-type { margin: 0; }
+  .differences-list h5,
+  .see-differents p { font-size: 16px; }
+  .our-services li,
+  .surgery li { width: 50%; }
+  .surgery img { width: 100%; }
+  h3 { font-size: 24px; }
+  .client-review h3 { font-size: 24px; }
+  .client-review li:last-of-type p { margin-left: 0; }
+  .free-opening li {  margin: auto 10%; }
+  .free-opening li:last-of-type { width: 80%; }
+  .our-customers li { width: 70%; }
+  .download-info .fas { left: 6%; }
+  .our-customers .wrapper > p { font-size: 12px; }
+  .our-customers .right { right: -30px; }
+  .our-customers .left { left: -30px; }
+  .our-customers .right::before,
+  .our-customers .left::before { font-size: 30px; }
+  .download-info h3 { width: 64%; }
+  .download-info .fas {  left: 9%; }
+  .download-info input[type=text], 
+  .download-info input[type=email] {  width: 50%; }
+  .download-info input[type=text],  
+  .download-info input[type=email] {  padding: 15px 7%; }
+  .top-review-content li:last-child { width: auto; }
+  .free-services-container li:last-of-type a { font-size: 18px; }
+  .footer-links h5 { font-size: 21px; }
+}
