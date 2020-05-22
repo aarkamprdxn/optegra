@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -105,41 +106,72 @@ li {
 }
 
 /* common styling */
-
 h3 {
   font-size: 38px;
   font-weight: 600;
 }
 
+.header-top-content li a,
+.banner-content > p,
+.banner-content h4,
+.banner-content a,
+.our-services p,
+.surgery p,
+.free-services p,
+.client-review li:last-of-type p,
+.free-opening p,
+.customer-content,
+.accordion-head h4,
+.footer-links h5 {
+  font-size: 18px;
+} 
+
+.menu,
+.our-services,
+.surgery,
+.free-services-container,
+.our-customers ul,
+.eye-surgery-review ul,
+.lens-replacement-faq ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+
 /*=================================
-  Home styling starts here
+  Header styling starts here
 =================================*/
 
 /* header section start */
-header .wrapper{  width: 100%; }
+header .wrapper { width: 100%; }
+header { border-bottom: 1px solid #d3d3d3; }
 
 .header-top {
   border-bottom: 1px solid #d3d3d3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h1 { padding: 0  5px;}
-header { border-bottom: 1px solid #d3d3d3; }
-
-.header-top-content li a { 
-  color: #000;
-  font-size: 18px;
-}
+h1 { padding: 0 5px; }
+.header-top-content li a { color: #000; }
 
 .header-top-content li:last-of-type a {
   padding: 35px 52px;
   color: #fff;
 }
 
-.header-top-content li:nth-child(2) a {  margin: 0 36px; }
-.header-top-content li:last-of-type {   background-color: #ee5d22; }
+.header-top-content li:nth-child(2) a { margin: 0 36px; }
+.header-top-content li:last-of-type { background-color: #ee5d22; }
 
 .header-top-content li a::before {
   margin-right: 7px;
@@ -150,25 +182,22 @@ header { border-bottom: 1px solid #d3d3d3; }
 .header-top-content li:first-of-type a::before { content: '\f041'; }
 .header-top-content li:nth-child(2) a::before { content: '\f095'; }
 .header-top-content li:last-of-type a::before { content: '\f133'; }
-
-.menu {
-  margin: 0 4.5% 0 6%;
-  display: flex;
-  justify-content: space-around;
-}
+.menu { margin: 0 4.5% 0 6%; }
 
 .header-bottom a { 
   padding: 16px 0;
   color: #66bcd2;
 }
 
-nav li {padding: 0 12px;}
+nav li { padding: 0 12px; }
 nav a span {  font-size: 0px; }
 nav a span::before { font-size: 16px; }
 .hamburger span { display: none; }
+.menu { position: relative; }
 
 .dropdown {
-  width: 12%;
+  max-width: 224px;
+  width: 100%;
   display: none;
   position: absolute;
   background: #f2f2f2;
@@ -176,9 +205,7 @@ nav a span::before { font-size: 16px; }
   z-index: 1;
 }
 
-.dropdown li { display: none;}
 .dropdown li { display: block; z-index: 3; }
-.dropdown li a { padding: 15px; } 
 .dropdown li:hover { background-color: #cef1ea; }
 
 nav li:hover ul.dropdown { 
@@ -186,14 +213,22 @@ nav li:hover ul.dropdown {
   display: block;
   text-align: left;
  } 
-/* header section end */
+ /* header section end */
+
+ /*=================================
+  Header styling end here
+=================================*/
+
+/*=================================
+  Home styling starts here
+=================================*/
 
 /* banner section start */
 .banner {
   padding: 104px 0 92px;
   border-bottom-left-radius: 50% 3.5%;
   border-bottom-right-radius: 50% 3.5%;
-  background: #91c299 url(https://via.placeholder.com/1520x620/91c299?text=Optegra) no-repeat 50% 50%;
+  background: #91c299 url(https://via.placeholder.com/1520x620/91c299/91c299?text=Optegra) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -204,15 +239,13 @@ h2 {
 }
 
 .banner-content { margin: 0 8.7%; }
+.banner-content li:first-child { margin-right: 3.7%; }
 
 .banner-content > p { 
   padding: 34px 0 36px;
   color: #fff;
-  font-size: 18px;
   font-weight: 600;
 }
-
-.banner-content li:first-child {  margin-right: 3.7%; }
 
 .banner-content form {
   padding: 28px 2.5%;
@@ -223,7 +256,6 @@ h2 {
 
 .banner-content h4 {
   color: #fff;
-  font-size: 18px;
   font-weight: 600;
 }
 
@@ -240,9 +272,8 @@ h2 {
   border-radius: 25px;
   background-color: #ee5d22;
   color: #fff;
-  text-align: center;
-  font-size: 18px;
   font-weight: 600;
+  text-align: center;
 }
 
 .banner-content a::before,
@@ -257,30 +288,23 @@ h2 {
 /* service section start */
 .our-services {
   padding: 60px 0 148px;
-  display: flex;
-  justify-content: space-around;
   color: #007374;
   text-align: center;
 }
 
 .our-services span,
 .free-services span { font-size: 0px; }
-
 .our-services span::before,
 .free-services span::before { font-size: 48px; }
-
 .our-services li { width: 20%; }
 
 .our-services p { 
   padding-top: 16px;
-  font-size: 18px;
   line-height: 1.6;
 }
 
 .surgery {
   margin-bottom: 130px;
-  display: flex;
-  justify-content: space-around;
   text-align: center;
 }
 
@@ -291,7 +315,7 @@ h2 {
   border-radius: 50%;
 }
 
-.surgery h4 ,
+.surgery h4,
 .free-services h4 {
   padding-top: 20px;
   color: #007374;
@@ -303,12 +327,11 @@ h2 {
 .free-services p {
   padding: 10px 0;
   color: #000000b3;
-  font-size: 18px;
  }
 
  .surgery a,
  .free-opening a,
- .download-info .form-control a ,
+ .download-info .form-control a,
  .free-services a,
  .load-more-box a {
    padding: 15px 5%;
@@ -329,25 +352,24 @@ h2 {
   
   /* see different section start */
   .see-differents,
-  footer{
+  footer {
     border-top: 1px solid #d3d3d3;
     border-top-left-radius: 50% 5%;
     border-top-right-radius: 50% 5%;
   }
-  
-  .see-differents-container {  margin: 106px 25% 118px;}
-  
+    
   .see-differents h3 {
     margin-bottom: 20px;
     color: #007374;
   }
-
-.see-differents p {
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.see-differents p:last-of-type {  margin-bottom: 70px; }
+  
+  .see-differents p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+.see-differents-container { margin: 106px 25% 118px; }
+.see-differents p:last-of-type { margin-bottom: 70px; }
 .see-differents-container p span { color: #007374; }
 
 .differences-list h5 {
@@ -374,13 +396,13 @@ h2 {
   margin-bottom: 24px;
 }
 
-.differences-list-content ul {  display: flex;}
-.differences-list li:first-of-type span { background-color: #2f6f73;}
-.differences-list li:nth-child(2) span { background-color: #2f6f73; opacity: 0.7;}
-.differences-list li:nth-child(3) span { background-color: #2f6f73; opacity: 0.3;}
-.differences-list li:nth-child(4) span { background-color: #2f6f73; opacity: 0.5;}
-.differences-list li:nth-child(5) span { background-color: #2f6f73; opacity: 0.8;}
-.differences-img li:first-of-type {  margin: 4px 7% 0 10%; }
+.differences-list-content ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.differences-list li:first-of-type span { background-color: #2f6f73; }
+.differences-list li:nth-child(2) span { background-color: #2f6f73; opacity: 0.7; }
+.differences-list li:nth-child(3) span { background-color: #2f6f73; opacity: 0.3; }
+.differences-list li:nth-child(4) span { background-color: #2f6f73; opacity: 0.5; }
+.differences-list li:nth-child(5) span { background-color: #2f6f73; opacity: 0.8; }
+.differences-img li:first-of-type { margin: 4px 7% 0 10%; }
 /* see different section end */
 
 /* client review section start */
@@ -398,17 +420,19 @@ h2 {
 }
 
 .client-review h3 {
+  margin: 0 7%;
   font-weight: 700;
-  word-spacing: 16px;
 }
 
 .client-review ul {
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
 
-.client-review li:first-of-type { margin-left: 10%;}
+.client-review li:first-of-type { margin-left: 10%; }
 .client-review img { border-radius: 50%; }
 .client-review li:first-of-type p { font-size: 14px; }
 
@@ -416,7 +440,8 @@ h2 {
   padding-bottom: 3px;
   margin-top: 12px;
   font-weight: 600;
-  text-decoration: underline #66bcd2;
+  -webkit-text-decoration: underline #66bcd2;
+          text-decoration: underline #66bcd2;
 }
 
 .client-review li:last-of-type p { 
@@ -427,7 +452,6 @@ h2 {
   position: relative;
   background-color: #fff;
   color: #00000099;
-  font-size: 18px;
   line-height: 1.6;
   text-align: left;
 }
@@ -454,21 +478,23 @@ h2 {
 .quote {
   width: 5%;
   height: 40px;
-  font-size: 0;
-  background-color: #fff;
-  margin-left: 22%;
   border-bottom-right-radius: 100%;
+  margin-left: 22%;
+  background-color: #fff;
+  font-size: 0;
 }
 /* client review section end*/
 
 /* free opening section start*/
 .free-opening ul {
   padding: 128px 7% 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .free-opening h3,
-label a { color: #007374; }
+ .download-info .form-group a { color: #007374; }
 
 .free-opening li:first-child span::before { 
   color: #70d0ba;
@@ -482,17 +508,14 @@ label a { color: #007374; }
 }
 
 .free-opening li:first-child span { font-size:  0; }
-.free-opening p { font-size: 18px; }
 .free-opening li:last-of-type p:first-of-type { padding: 20px 0; }
-
-.free-opening p:last-of-type { padding-bottom: 20px;}
+.free-opening p:last-of-type { padding-bottom: 20px; }
 .download-info .form-control  { padding-top: 20px; }
 /* free opening section end*/
 
 /* our customer section start */
 .our-customers {  padding: 102px 0 148px; }
-.our-customers li,
-.top-review-content ul { box-shadow: 0 0 5px #888;}
+.our-customers ul {  -webkit-box-align: center;  -ms-flex-align: center;  align-items: center; }
 
 .our-customers .wrapper > p { 
   padding: 16px 0 28px;
@@ -505,12 +528,6 @@ label a { color: #007374; }
   font-family: FontAwesome;
 }
 
-.our-customers ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .our-customers li {
   width: 24%;
   padding: 22px 30px 50px;
@@ -518,7 +535,7 @@ label a { color: #007374; }
   background-color: #fff;
 }
 
-.star .fas{
+.star .fas {
   padding: 5px;
   margin-bottom: 18px;
   background-color: #00b67a;
@@ -527,19 +544,15 @@ label a { color: #007374; }
 }
 
 .star .fas::before { font-size: 16px; }
-.customer-content { font-size: 18px;}
 .customer-content h5 { font-weight: 600; }
-.customer-content p { padding: 10px 0;}
+.customer-content p { padding: 10px 0; }
+.carousel-container { position: relative; }
 
 .customer-content span {
   color: #a9a9a9;
   font-size: 16px;
 }
 
-/* Carousel Section */
-.carousel-container { position: relative; }
-
-/* right & leftious buttons */
 .our-customers .left,
 .our-customers .right {
   width: auto;
@@ -560,9 +573,10 @@ label a { color: #007374; }
           user-select: none;
 }
 
-.our-customers .left::before { content: '\f104';}
-
-.our-customers .right::before { content: '\f105';}
+.our-customers .left { left: -5%; }
+.our-customers .right { right: -5%; }
+.our-customers .left::before { content: '\f104'; }
+.our-customers .right::before { content: '\f105'; }
 
 .our-customers .left::before,
 .our-customers .right::before { 
@@ -570,12 +584,8 @@ label a { color: #007374; }
   font-size: 50px;
  }
 
-.our-customers .left { left: -5%; }
-.our-customers .right { right: -5%; }
-
-/* On hover, add a black background color with a little bit see-through */
 .our-customers .left:hover,
-.our-customers .right:hover {  color: #3daca5;}
+.our-customers .right:hover { color: #3daca5; }
 
 .fade-right {
   -webkit-animation-name: fade-right;
@@ -599,7 +609,7 @@ label a { color: #007374; }
 .faq,
 .free-services { padding: 96px 0 98px; }
 
-.faq h3{  
+.faq h3 {  
   width: 46%;
   padding-bottom: 16px;
   border-bottom: 1px solid #d3d3d3;
@@ -614,7 +624,6 @@ label a { color: #007374; }
 
 .accordion-head h4 {
   padding: 16px 0 26px;
-  font-size: 18px;
   font-weight: 600;
 }
 
@@ -629,25 +638,24 @@ label a { color: #007374; }
   font-size: 14px;
   overflow: hidden;
   text-align: left;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
-.accordion-content p {  padding: 10px 0 25px; }
-
 .accordion-head h4:after {
   content: '\f078';
+  color: #ee5d22;
   float: right;
   font-family: "fontawesome";
   font-size: 16px;
-  color: #ee5d22;
 }
 
-.accordion-head h4.active:after { content: '\f077'; }
-
+.accordion-content p { padding: 10px 0 25px; }
 .accordion-head:hover,
 .accordion-head.active { color: #ee5d22; }
+.accordion-head h4.active:after { content: '\f077'; }
 /* faq section end */
-
 
 /* download-info section start*/
 .download-info { 
@@ -678,6 +686,26 @@ label a { color: #007374; }
   font-size: 0;
 }   
 
+.download-info input::-webkit-input-placeholder, .banner input::-webkit-input-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input::-moz-placeholder, .banner input::-moz-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input:-ms-input-placeholder, .banner input:-ms-input-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
+.download-info input::-ms-input-placeholder, .banner input::-ms-input-placeholder {
+  padding-left: 13px;
+  color: #a9a9a9;
+}   
+
 .download-info input::placeholder,
 .banner input::placeholder {
   padding-left: 13px;
@@ -688,7 +716,7 @@ label a { color: #007374; }
 .banner .fas::before { font-size: 14px; }
 
 .download-info h3 span { border-bottom: 2px solid #70d0ba; }
-.download-info .form-control a { padding: 13px 5%;}
+.download-info .form-control a { padding: 13px 5%; }
 
 .message {
   width: 40%;
@@ -698,19 +726,16 @@ label a { color: #007374; }
   opacity: 0;
   text-align: left
 }
-
 /* download-info section end*/
 
 /* free service section start */
 .free-services-container {
-  display: flex;
-  justify-content: space-around;
   color: #007374;
   text-align: center;
 }
 
 .free-services-container li { width: 30%; }
-.call { font-size: 22px;}
+.call { font-size: 22px; }
 
 .free-services-container p { 
   padding-bottom: 24px; 
@@ -723,89 +748,23 @@ label a { color: #007374; }
 }
 /* free service section end */
 
-/* footer section start */
-footer {
- padding: 118px 0 80px;
- background-color: #007374;
-}
-
-.footer-links {
-  display:flex;
-  justify-content: space-between;
-  vertical-align: top;
-}
-
-.footer-links > li {  width: 22%; }
-
-.footer-links h5 { 
-  margin-bottom: 30px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.footer-links a ,
-.footer-links p {
-  color: #fff;
-  line-height: 1.8;
-}
-
-.footer-top > p {
-  width: 70%;
-  padding: 50px 0 50px;
-  margin: 0 auto;
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
-}
-
-.footer-top { border-bottom: 1px solid #fff; }
-
-.social-links li {  display: inline-block ; }
-.social-links span::before {   font-size: 16px; }
-
-.social-links span {  
-  padding: 5px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  margin-right: 5px;
-  font-size: 0;
-}
-
-.footer-bottom {
-  padding-top: 40px;
-  color: #fff;
-  text-align: center;
-}
-
-.footer-bottom h5 { font-weight: 600;}
-.footer-bottom p { font-size: 12px; }
-.footer-bottom li { width: 10%;}
-.footer-bottom figure { padding: 28px 3%;}
-
-/* footer section end */
 /*=================================
   Home styling ends here
-=================================*/ 
+=================================*/
+
+/*===================================
+  Laser Eye Surgey styling start here
+====================================*/ 
 
 /* .eye-surgery-review section start */
-
 .eye-surgery-review,
 .lens-replacement-faq {  padding: 50px 0;}
-
 .eye-surgery-review ul,
-.lens-replacement-faq ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
+.lens-replacement-faq ul { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .eye-surgery-review li,
 .lens-replacement-faq li { width: 43.5%; }
-
 .eye-surgery-review li:first-child,
 .lens-replacement-faq li:first-child { text-align: right; }
-
 .eye-surgery-review h3,
 .lens-replacement-faq h3 { color: #007374; }
 
@@ -820,9 +779,67 @@ footer {
 .lens-replacement-faq li img {  
   width: 91.5%;
   border-radius: 50%; 
- }
- /*eye-surgery-review section end */ 
+}
 
+.lens-replacement-faq li img:hover {
+  -webkit-box-shadow: 0 0 6px #000;
+          box-shadow: 0 0 6px #000;
+  cursor: pointer;
+}
+/*eye-surgery-review section end */ 
+
+ /*=================================
+  Laser Eye Surgey styling ends here
+===================================*/ 
+
+/*=================================
+  Lens Replacement styling start here
+=================================*/ 
+
+/* .lens-replacement-faq section start */
+ .lightbox {
+   width: 100%;
+   height: 100%;
+   padding: 72px 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #000000;
+   opacity: 0;
+   -webkit-transform: scale(0, 0);
+       -ms-transform: scale(0, 0);
+           transform: scale(0, 0);
+   -webkit-transition: .2s;
+   -o-transition: .2s;
+   transition: .2s;
+   z-index: 2;
+}
+
+.modal-content {
+  max-width: 1200px;
+  width: 70%;
+  padding: 0;
+  margin: auto;
+  position: relative;
+  background-color: #fefefe;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 42px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* .lens-replacement-faq section end */
  
 /* top-review section  start*/
 .top-review {
@@ -840,12 +857,14 @@ footer {
 .top-review-content ul {
   border: 1px solid #a9a9a9;
   border-radius: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
 
 .top-review-content a { color: #ee5d22; }
-.top-review-content:nth-child(2n) { margin-left: 20px;}
+.top-review-content:nth-child(2n) { margin-left: 20px; }
 
 .top-review-content li:last-child {
   width: 60%;
@@ -871,26 +890,106 @@ footer {
 }
 
 .load-more { display: none;}
-.highlight-review { background-color: #e6f8f4;}
-.load-more-box { text-align: center;}
+.highlight-review { background-color: #e6f8f4; }
+.load-more-box { text-align: center; }
 /* top-review section  end*/
 
-/*========================================
- Laser Eye Replacement styling starts here
-=========================================*/
+/*=================================
+  Lens Replacement styling end here
+=================================*/  
 
+/*=================================
+  Footer styling start here
+=================================*/ 
+
+footer {
+  padding: 118px 0 80px;
+  background-color: #007374;
+ }
+ 
+ .footer-links {
+   display:-webkit-box;
+   display:-ms-flexbox;
+   display:flex;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   vertical-align: top;
+ }
+ 
+ .footer-links > li { width: 22%; }
+ 
+ .footer-links h5 { 
+   margin-bottom: 30px;
+   color: #fff;
+   font-weight: 600;
+ }
+ 
+ .footer-links a ,
+ .footer-links p {
+   color: #fff;
+   line-height: 1.8;
+ }
+ 
+ .footer-top > p {
+   width: 70%;
+   padding: 50px 0 50px;
+   margin: 0 auto;
+   color: #fff;
+   font-size: 12px;
+   text-align: center;
+ }
+ 
+ .footer-top { border-bottom: 1px solid #fff; }
+ .social-links li { display: inline-block; }
+ .social-links span::before { font-size: 16px; }
+ 
+ .social-links span {  
+   padding: 5px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   margin-right: 5px;
+   font-size: 0;
+ }
+ 
+ .footer-bottom {
+   padding-top: 40px;
+   color: #fff;
+   text-align: center;
+ }
+ 
+ .footer-bottom h5 { font-weight: 600; }
+ .footer-bottom p { font-size: 12px; }
+ .footer-bottom li { width: 10%; }
+ .footer-bottom figure { padding: 28px 3%; }
+ 
+ /*=================================
+   Footer styling ends here
+ =================================*/ 
+ 
 /*media query starts*/
 /*media query for 1300px starts here*/
 @media only screen and (max-width: 1300px) {
+  .menu { margin: 0; }
+  nav li { padding: 0; }
+  .header-bottom a { padding: 16px 5px; }
+  nav li:hover ul.dropdown { margin-left: 0; }
+
+  .client-review li:last-of-type p {
+   padding: 24px 68px; 
+    margin-top: 9px;
+    margin-left: 15%
+  }
+
   .top-review p {
     padding: 10px 0 5px;
     font-size: 14px;
-  } 
-  .top-review-content li:last-child {  padding: 12px; }
-  .top-review-content img { width: auto;}
+  }
+   
+  .top-review-content li:last-child { padding: 12px; }
+  .top-review-content img { width: auto; }
 }
 
-/*media query starts*/
 /*media query for 1024px starts here*/
 @media only screen and (min-width: 1024px) {
   nav li:hover { background-color: #007374; }
@@ -898,10 +997,16 @@ footer {
   
   .header-top-content a:hover { 
     color: #ee5d22; 
+    -webkit-transition: all .2s ease-in-out; 
+    -o-transition: all .2s ease-in-out; 
     transition: all .2s ease-in-out;
   }
   
-  .header-top-content li:last-of-type:hover,
+  .header-top-content li:last-of-type a:hover {
+    background-color: #db500b;
+    color: #e1ffff80;
+  }
+
   .banner-content a:hover,
   .surgery a:hover,
   .free-opening a:hover,
@@ -917,164 +1022,176 @@ footer {
     transition: .2s;
   }
   
-  .our-customers li:hover {
-    background-color: #F0FFF0	;
-    box-shadow: 0 0 5px 5px#888;
-    cursor: pointer;
-  }
-  
-  .top-review-content ul:hover {
-    background-color: #ffdb99	;
-    box-shadow: 0 0 5px 5px#888;
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-  }
   .top-review-content a:hover,
   .top-review-content a:hover::after {
     color: #70d0ba;
     -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
   
-  footer a:hover { 
+  footer a:hover {
     text-decoration: underline;
-  -webkit-transform: translateX(6px);
-      -ms-transform: translateX(6px);
-          transform: translateX(6px);
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
+    -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
   }
 
-  footer a:hover::before {
-    padding-right: 5px;
-    content: '\f0a4';
-    font-family: FontAwesome;
-    text-decoration: none;
-  }
   .social-links a:hover {
-    color: #66bcd2;
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+            -ms-transform: scale(1.5);
+        transform: scale(1.5);
   }
 
-  .footer-bottom img:hover {
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.8);
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-  }
 }
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-
   /* hamburger  start*/
   .hamburger {
+    padding: 12px;
+    margin: -12px;
     display: block;
     position: absolute;
-    right: 10%;
-    top: 2%;
-    width: 5%;
+    right: 24px;
+    top: 22px;
+    cursor: pointer;
   }
 
   .hamburger > span {
-    background-color: #007374;
-    border-radius: 3px;
-    display: block;
+    width: 36px;
     height: 4px;
+    display: block;
+    border-radius: 3px;
     margin: 5px 0;
+    background-color: #007374;
     text-indent: -9999px;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
   
   .hamburger-active > span:nth-child(1) {
-    background-color: crimson;
+    background-color: #dc143c;
     margin: 0;
-    transform: translate(-5px,5px) rotate(45deg);
+    -webkit-transform: translate(-5px,5px) rotate(45deg);
+        -ms-transform: translate(-5px,5px) rotate(45deg);
+            transform: translate(-5px,5px) rotate(45deg);
   }
   
   .hamburger-active > span:nth-child(2) {
-    background-color: blueviolet;
+    background-color: #8a2be2;
     margin: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
   }
 
   .hamburger-active > span:nth-child(3) {
-    background-color: crimson;
+    background-color: #dc143c;
     margin: 0;
-    transform: translate(-6px,-5px) rotate(-45deg);
+    -webkit-transform: translate(-6px,-5px) rotate(-45deg);
+        -ms-transform: translate(-6px,-5px) rotate(-45deg);
+            transform: translate(-6px,-5px) rotate(-45deg);
   }
   
   .menu {
-    flex-wrap: wrap;
+    max-width: 200px;
+    min-width: 200px;
+    width: 30%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
-    width: auto;
-    right: 0;
-    transform: scale(0);
-    top: 45px;
-    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);
-    background: linear-gradient(to right, #CCC, #fff,#CBB);
+    left: 0;
+    text-align: left;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateY(-1000px);
+        -ms-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .dropdown {
+    right: -200px;
+    margin-top: -56px;
   }
   
   .navScale {
-    transform: scale(1);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
     z-index: 2;
   }
 
   nav ul li { padding: 5px; }
-  
-  .menu li a { 
-    color: #000 ; 
-    border: none;
-  }
+  .menu li:hover { background-color: #cef1ea; }
+  .menu li a { border: none; }
 
   .menu li {
-    border: 1px solid #009fe3;
     display: block;
-    background-color:white;
+    background-color: #f2f2f2;
     text-align: center;
   }
   /* hamburger end */
   
-  .header-top-content { display: none; }
-  .banner-content a { font-size: 12px; }
+  .header-top-content,
+  .banner form,
+  .quote { display: none; }
+  .banner { padding: 200px 0 110px; }
+  .banner-content a,
+  .surgery a { font-size: 12px; }
   .banner-content input { width: 14%; }
+  .our-services p { line-height: 1.5; }
   .surgery h4 { font-size: 19px;}
-  
-  .surgery a,
   .customer-content p { font-size: 15px; }
-  
-  .see-differents h3 { font-size: 31px;}
+  .see-differents h3 { font-size: 31px; }
   .our-customers li { width: 20%; }
   .star .fas::before { font-size: 10px; }
-  .download-info .fas { left: 4.5%;}
-  
+  .download-info .fas { left: 4.5%; }
   .faq h3,
-  .accordion-section {  width: 64%;}
+  .accordion-section { width: 64%; }
+  .our-services { display: inline-block; }
+  
+  .our-services li {
+    width: 33%;
+    padding-left: 40px;
+    margin-bottom: 50px;
+    vertical-align: top;
+  }
 
   .top-review p {
     padding: 20px 0 10px;
     font-size: 15px;
   }
 
-  .top-review-content {
+  .top-review-content,
+  .top-review-content:nth-child(2n) {
     width: 74%;
     margin: 0 13% 20px;
   }
 
-  .top-review-content:nth-child(2n) { margin-left: 0;}
 }
 
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
-  
   h2 { font-size: 45px; }
   .banner p { font-size: 20px; }
   .surgery p { font-size: 16px; }
-  .banner-content input { width: 20%;}
+  .banner-content input { width: 20%; }
   .banner .fas { left: 4.3%; }
 
   .banner-content a {
@@ -1084,14 +1201,12 @@ footer {
   }
 
   .free-services-container li:nth-child(2),
-  .surgery li:nth-child(2) { margin: 50px auto;}
-  
+  .surgery li:nth-child(2) { margin: 50px auto; }
   .surgery a,
   .free-opening a,
   .download-info .form-control a ,
   .free-services a,
-  .load-more-box a { padding: 15px 7%;}
-  
+  .load-more-box a { padding: 15px 7%; }
   .our-services,
   .surgery li,.surgery,
   .free-opening ul,
@@ -1100,41 +1215,31 @@ footer {
   .eye-surgery-review ul,
   .lens-replacement-faq ul,
   .footer-links { display: block; }
-
   .our-services { padding: 90px 0; }
-
-  .our-services li {
-    width: 33%;
-    margin-bottom: 50px;
-    vertical-align: top;
-    padding-right: 40px;
-  }
-
+  .surgery li,
+  .surgery img { width: 60%; }
+  .our-services p { font-size: 15px; }
   .surgery li { margin: 0 auto; }
   .see-differents-container {  margin: 106px 10% 118px; }
   .client-review h3 { font-size: 30px; }
   .client-review ul { display: block; }
-  .accordion-section,.faq h3 { width: 80%; }
-
+  .free-opening ul { padding: 128px 0 94px; }
+  .accordion-section,
+  .faq h3 { width: 80%; }
   .free-services-container li,
   .download-info h3 { width: 50%; }
-  
   .our-customers li { width: 45%; }
-  .client-review li:first-of-type { margin: 0;}
-
-  
+  .client-review li:first-of-type { margin: 0; }
   .our-customers li:nth-child(2),
   .our-customers li:nth-child(3) { display: none; }
+  .client-review h3 {  text-align: center; }
+  .client-review li:last-of-type p { margin: 20px 0; }
+  .top-review-content li:last-child { padding: 20px 22px 16px; }
 
-  .client-review h3 {
-    text-align: center;
-    word-spacing: 10px;
-  }
-  
   .free-opening li:last-of-type {  
     width: 70%;
-    margin: auto 15%;
     padding-left: 0;
+    margin: auto 15%;
   }
   
   .free-opening li,
@@ -1142,100 +1247,91 @@ footer {
   
   .eye-surgery-review li:first-child,
   .lens-replacement-faq li:first-child {
-    text-align: center;
     width: 65%;
     margin: 0 18% 20px;
+    text-align: center;
   }
 
   .eye-surgery-review li,
   .lens-replacement-faq li {
-    text-align: center;
     width: auto;
+    text-align: center;
   }
 
-  .top-review-content li:last-child { padding: 20px 22px 16px; }
-  .top-review-content { width: 100%; margin: 0 0 20px; }
-
+  .top-review-content,
+  .top-review-content:nth-child(2n) { 
+    width: 100%;
+     margin: 0 0 20px;
+  }
+  
   .social-links li { margin: 0; }
   .footer-links h5 { font-size: 24px; }
 
   .footer-links > li { 
-    margin: 0;
-    text-align: center;
     width: 100%;
     padding-bottom: 30px;
     border-bottom: 1px solid #fff;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #91c299;
+    color: #007374;
   }
 }
 
 
 /*media query for 540px starts here*/
 @media only screen and (max-width: 540px) {
-  
-  h2 {font-size: 35px;}
-  .banner form {  display: none; }
-  .banner { padding: 200px 0 110px; }
-  .banner ul { display: flex; }
-  .see-differents h3 { font-size: 21px; }
-  
-  .surgery a,
+  .banner .wrapper,
+  .services .wrapper,
+  .see-differents .wrapper,
+  .free-opening .wrapper,
+  .faq .wrapper,
+  .free-services .wrapper { width: 100%; }
+  .download-info .wrapper { width: 90%; }
+  .dropdown { right: -74px; margin-top: -6px; }
+  h2 { font-size: 35px; }
+  .top-review-content li:first-child { display: none; }
+  .banner ul,.differences-img { display: -webkit-box; display: -ms-flexbox; display: flex; }
+  .our-services li { font-size: 16px; }
+  .see-differents h3 { font-size: 19px; }
+  .differences-img li:first-of-type { padding-right: 3px; }
+  .surgery a { font-size: 9px; }
   .free-opening a,
   .download-info .form-control a ,
   .free-services a,
-  .load-more-box a
+  .load-more-box a 
+  .free-services-container a { font-size: 10px; }
   .our-customers li p,
   .accordion-head h4,
   .our-customers .wrapper > p,
   .eye-surgery-review p,
   .lens-replacement-faq p { font-size: 13px; }
-  
-  .our-services li {  padding-right: 0;}
-  .differences-img li:first-of-type { margin: 0;}
-
+  .our-services li { padding-left: 0; }
+  .differences-img li:first-of-type { margin: 0; }
   .differences-list h5,
   .see-differents p { font-size: 16px; }
-
   .our-services li,
-  .surgery li {  width: 50%; }
-
+  .surgery li { width: 50%; }
+  .surgery img { width: 100%; }
   h3 { font-size: 24px; }
-  .client-review h3 { word-spacing: 5px; }
+  .client-review h3 { font-size: 24px; }
+  .client-review li:last-of-type p { margin-left: 0; }
+  .free-opening li {  margin: auto 10%; }
   .free-opening li:last-of-type { width: 80%; }
   .our-customers li { width: 70%; }
   .download-info .fas { left: 6%; }
-  
-  .our-customers .right::before,
-  .our-customers .left::before { font-size: 36px; }
-
-  .download-info input[type=text], 
-  .download-info input[type=email] {  width: 50%; }
-
-  .top-review-content li:first-child { display: none;}
-  .top-review-content li:last-child { width: auto; }
-}
-
-/*media query for 375px starts here*/
-@media only screen and (max-width: 375px) {
-  .banner ul ,.differences-img { display: flex;}
-  .our-services li { font-size: 16px; }
-  .see-differents h3 { font-size: 19px; }
-  .differences-img li:first-of-type { padding-right: 3px; }
-  .client-review h3 { font-size: 24px; }
-  .client-review li:last-of-type p { margin-left: 0;}
-  .free-opening li {  margin: auto 10%; }
-  .our-customers .wrapper > p {  font-size: 12px; }
+  .our-customers .wrapper > p { font-size: 12px; }
   .our-customers .right { right: -30px; }
   .our-customers .left { left: -30px; }
-  .download-info h3 { width: 64%; }
-  .download-info .fas {  left: 9%; }
-  .free-services-container a { font-size: 13px; }
-  .free-services-container li:last-of-type a { font-size: 18px; }
-  .footer-links h5 { font-size: 21px; } 
-
   .our-customers .right::before,
   .our-customers .left::before { font-size: 30px; }
-
-  .download-info input[type=text],
+  .download-info h3 { width: 64%; }
+  .download-info .fas {  left: 9%; }
+  .download-info input[type=text], 
+  .download-info input[type=email] {  width: 50%; }
+  .download-info input[type=text],  
   .download-info input[type=email] {  padding: 15px 7%; }
+  .top-review-content li:last-child { width: auto; }
+  .free-services-container li:last-of-type a { font-size: 18px; }
+  .footer-links h5 { font-size: 21px; }
 }
