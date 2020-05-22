@@ -179,7 +179,9 @@ var blockLength = block.length;
 var loadClick = document.getElementById("load-more-btn");
 var count = 0;
 // added on click to load more
-loadClick.addEventListener("click",loadMore);
+if (loadBtn) {
+  loadClick.addEventListener("click", loadMore);
+}
 // added function for displaying blocks or hiding blocks
 function loadMore() {
   for (var i = count; i < count + 2 && i < blockLength; i++) {
